@@ -1,0 +1,227 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Training & Career Services | DUSENT SOFT TECH - Courses & Placement Programs{% endblock %}
+
+{% block content %}
+
+<!-- Hero Header -->
+<section class="hero" style="padding: 140px 0 40px;">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-tag" style="margin-bottom: 20px;">
+        <span class="pulse-dot"></span>
+        <span>OUR SERVICES • TRAINING & CAREER PROGRAMS</span>
+      </div>
+      <h1 class="hero-title" style="font-size: 3.2rem;">
+        🎓 Training & <span class="gradient-text">Career Services</span>
+      </h1>
+      <p style="font-size: 1.15rem; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-main);">
+        We help students and job seekers prepare for today's technology industry through structured, practical, and project-based learning programs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Training Services Grid (Services 7 to 10) -->
+<section id="training-services" class="section" style="padding-top: 20px;">
+  <div class="container">
+    <div class="responsive-card-grid" style="margin-bottom: 60px;">
+      
+      <!-- 7. Placement Training -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">🎓</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">7. Placement Training</h3>
+        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+          We help students and job seekers prepare for today's technology industry.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 10px;">Training areas include:</div>
+        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+          <li>✓ Programming</li>
+          <li>✓ Full Stack Dev</li>
+          <li>✓ Web Development</li>
+          <li>✓ Software Engineering</li>
+          <li>✓ Database Stacks</li>
+          <li>✓ Aptitude & Reasoning</li>
+          <li>✓ Soft Skills</li>
+          <li>✓ Interview Preparation</li>
+          <li>✓ Resume Building</li>
+          <li>✓ Mock Interviews</li>
+        </ul>
+        <a href="{% url 'website:training' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Explore Placement Training →</a>
+      </div>
+
+      <!-- 8. Technical Training -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">💻</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gold-gradient-text">8. Technical Training</h3>
+        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+          Learn practical technology skills through structured and project-based training.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; margin-bottom: 10px;">Training programs include:</div>
+        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+          <li>✓ Python 3.13</li>
+          <li>✓ Java 21</li>
+          <li>✓ Full Stack Dev</li>
+          <li>✓ React.js</li>
+          <li>✓ Django 5</li>
+          <li>✓ SQL Databases</li>
+          <li>✓ Data Structures & DSA</li>
+          <li>✓ Cloud Basics</li>
+        </ul>
+        <div style="padding: 10px; background: rgba(245, 158, 11, 0.1); border: 1px dashed var(--accent-amber); border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--accent-amber); text-align: center; margin-bottom: 20px;">
+          Approach: Learn → Practice → Build → Prepare
+        </div>
+        <a href="#courses-grid" class="btn btn-outline btn-glow-3d" style="width: 100%;">View Training Programs →</a>
+      </div>
+
+      <!-- 9. College & Institutional Training -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">🏫</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">9. College & Institutional Training</h3>
+        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+          We collaborate with colleges and educational institutions to provide industry-oriented learning programs.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--accent-violet); font-weight: 700; margin-bottom: 10px;">We provide:</div>
+        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+          <li>✓ Technical Workshops</li>
+          <li>✓ Placement Training</li>
+          <li>✓ Value-Added Courses</li>
+          <li>✓ Project Training</li>
+          <li>✓ Internship Programs</li>
+          <li>✓ Skill Development</li>
+          <li>✓ Industry Sessions</li>
+          <li>✓ Hackathons & Events</li>
+        </ul>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Partner With Us →</a>
+      </div>
+
+      <!-- 10. Internship & Project Training -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">🧪</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">10. Internship & Project Training</h3>
+        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+          Get practical exposure by working on real-world technology projects.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 700; margin-bottom: 10px;">Our project training includes:</div>
+        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+          <li>✓ Mini Projects</li>
+          <li>✓ Major Projects</li>
+          <li>✓ Full Stack Projects</li>
+          <li>✓ Web Applications</li>
+          <li>✓ Software Projects</li>
+          <li>✓ Database Projects</li>
+          <li>✓ Documentation Support</li>
+          <li>✓ Presentation Support</li>
+        </ul>
+        <a href="{% url 'website:training' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Explore Internship Programs →</a>
+      </div>
+
+    </div>
+
+    <!-- Active Filterable Programming Courses Grid -->
+    <div id="courses-grid" class="section-header" style="margin-bottom: 30px;">
+      <div class="section-subtitle">PROGRAMMING COURSES & SYLLABUS</div>
+      <h2 class="section-title">Explore All <span class="gradient-text">Language Tracks</span></h2>
+    </div>
+
+    <div class="course-filter">
+      <button class="filter-btn course-filter-btn active" data-course-filter="all">All Tech Courses</button>
+      <button class="filter-btn course-filter-btn" data-course-filter="python">Python & AI</button>
+      <button class="filter-btn course-filter-btn" data-course-filter="java">Java Microservices</button>
+      <button class="filter-btn course-filter-btn" data-course-filter="cpp">C++ & DSA</button>
+      <button class="filter-btn course-filter-btn" data-course-filter="web">Web Development</button>
+      <button class="filter-btn course-filter-btn" data-course-filter="ai">AI / Data Science</button>
+      <button class="filter-btn course-filter-btn" data-course-filter="cloud">Cloud & Cyber</button>
+    </div>
+
+    <div class="courses-grid">
+      {% for course in courses %}
+      <div class="glass-panel-3d course-card" data-tilt
+           data-course-category="{{ course.language_category }}"
+           data-title="{{ course.title }}"
+           data-category-display="{{ course.get_language_category_display }}"
+           data-duration="{{ course.duration }}"
+           data-level="{{ course.skill_level }}"
+           data-validity="{{ course.validity_period }}"
+           data-cert="{{ course.certification_name }}"
+           data-price="{{ course.price }}"
+           data-desc="{{ course.short_description }}"
+           data-modules="[&quot;{% for m in course.get_modules %}{{ m }}{% if not forloop.last %}&quot;,&quot;{% endif %}{% endfor %}&quot;]">
+        <div>
+          <span class="course-badge">{{ course.badge_text }}</span>
+          <span class="course-lang-tag">{{ course.get_language_category_display }}</span>
+          <h3 class="course-title">{{ course.title }}</h3>
+          
+          <div class="validity-pill">
+            <span>⏱️ Validity:</span> {{ course.validity_period }}
+          </div>
+
+          <div class="course-meta">
+            <span>⏱️ {{ course.duration }}</span>
+            <span>🎯 {{ course.skill_level }}</span>
+          </div>
+
+          <p style="font-size: 0.9rem; margin-bottom: 16px;">{{ course.short_description }}</p>
+
+          <button class="btn btn-outline open-course-modal-btn" style="width: 100%; padding: 10px; margin-bottom: 16px; font-size: 0.85rem;">
+            View Full Syllabus & Validity →
+          </button>
+        </div>
+
+        <div class="course-price-row">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Course Fee</div>
+            <div class="course-price">{{ course.price }}</div>
+          </div>
+          <a href="{% url 'website:contact' %}" class="btn btn-accent" style="padding: 8px 18px; font-size: 0.85rem;">Enroll Details →</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Course Modal Popup -->
+<div id="course-modal" class="course-modal-backdrop">
+  <div class="course-modal-dialog glass-panel-3d">
+    <button id="close-course-modal" class="close-modal-btn">✕</button>
+    <span id="modal-course-category" class="course-lang-tag" style="margin-bottom: 12px; font-size: 0.85rem;">Python & AI</span>
+    <h2 id="modal-course-title" style="font-size: 2rem; margin-bottom: 14px;" class="gradient-text">Course Title</h2>
+    
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+      <div class="validity-pill" style="font-size: 0.85rem; padding: 6px 16px;">
+        <span>🎓 Validity & Access:</span> <span id="modal-course-validity">Lifetime Access + 2 Yrs Support</span>
+      </div>
+    </div>
+
+    <div class="responsive-form-row" style="margin-bottom: 24px;">
+      <div style="padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-light); border-radius: 10px;">
+        <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Duration & Pacing</span>
+        <div id="modal-course-duration" style="font-weight: 700; font-size: 1.05rem; color: var(--accent-cyan);">12 Weeks</div>
+      </div>
+      <div style="padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-light); border-radius: 10px;">
+        <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Certification Provided</span>
+        <div id="modal-course-cert" style="font-weight: 700; font-size: 1.05rem; color: var(--accent-emerald);">Certified Full-Stack Software Engineer</div>
+      </div>
+    </div>
+
+    <p id="modal-course-desc" style="font-size: 0.98rem; line-height: 1.7; margin-bottom: 24px;"></p>
+
+    <h4 style="font-size: 1.1rem; margin-bottom: 14px;">Detailed Syllabus & Learning Roadmap:</h4>
+    <div id="modal-course-syllabus" style="margin-bottom: 28px;"></div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <div>
+        <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Special Fee Structure</span>
+        <div id="modal-course-price" style="font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);">₹14,999 / $199</div>
+      </div>
+      <a href="{% url 'website:contact' %}" class="btn btn-accent" style="padding: 14px 32px; font-size: 1rem;">
+        Enroll in This Course Now →
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

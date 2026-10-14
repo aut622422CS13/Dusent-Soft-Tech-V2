@@ -1,0 +1,78 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Training Providing & 100% Placement Program | Dusent Soft Tech{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 140px 0 40px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">3. SERVICES • iii. TRAINING PROVIDING</div>
+      <h1 class="section-title">100% Placement Training & <span class="gradient-text">Career Launchpad</span></h1>
+      <p>Hands-on coding, live project internship, resume optimization, and direct placement drives with 85+ hiring company partners.</p>
+    </div>
+
+    <!-- 4 Step Placement Pathway -->
+    <div class="placement-path-grid">
+      <div class="glass-panel-3d placement-step-card" data-tilt>
+        <div class="step-number">1</div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Core Coding & DSA Masterclass</h4>
+        <p style="font-size: 0.88rem;">Solve 200+ Data Structures & Algorithm problems in Python 3.13, Java 21, or C++ with live mentor guidance.</p>
+      </div>
+
+      <div class="glass-panel-3d placement-step-card" data-tilt>
+        <div class="step-number">2</div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Live Client Project Internship</h4>
+        <p style="font-size: 0.88rem;">Work directly inside Dusent Soft Tech's development team building real client apps.</p>
+      </div>
+
+      <div class="glass-panel-3d placement-step-card" data-tilt>
+        <div class="step-number">3</div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Resume & Mock Interview Drills</h4>
+        <p style="font-size: 0.88rem;">1-on-1 technical mock interviews, GitHub portfolio polish, & LinkedIn recruiter visibility.</p>
+      </div>
+
+      <div class="glass-panel-3d placement-step-card" data-tilt>
+        <div class="step-number">4</div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Guaranteed Interview Drives</h4>
+        <p style="font-size: 0.88rem;">Direct interview calls until you receive your official job offer letter.</p>
+      </div>
+    </div>
+
+    <!-- Placement Highlights Table / Grid -->
+    <div style="margin-top: 60px;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 24px; text-align: center;" class="gradient-text">Recent Student Placement Success Stories</h3>
+      <div class="responsive-card-grid">
+        {% for placement in placements %}
+        <div class="glass-panel-3d" data-tilt style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: {{ placement.avatar_color }}; color: #000; font-weight: 800; display: flex; align-items: center; justify-content: center;">
+                  {{ placement.avatar_initials }}
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; color: #fff;">{{ placement.student_name }}</h4>
+                  <span style="font-size: 0.78rem; color: var(--accent-cyan);">{{ placement.placed_role }}</span>
+                </div>
+              </div>
+              <span class="course-badge" style="position: static; font-size: 0.8rem;">{{ placement.salary_package }}</span>
+            </div>
+            <p style="font-size: 0.88rem; font-style: italic; margin-bottom: 12px;">"{{ placement.review }}"</p>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-dim); border-top: 1px solid var(--border-light); padding-top: 10px;">
+            Hired at: <strong style="color: var(--accent-amber);">{{ placement.placed_company }}</strong> | {{ placement.course_taken }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="{% url 'website:contact' %}" class="btn btn-accent btn-glow-3d" style="padding: 16px 36px; font-size: 1.05rem;">
+        Enroll in 100% Placement Training Hub Now →
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

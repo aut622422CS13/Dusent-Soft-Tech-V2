@@ -1,0 +1,332 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Dusent Soft Tech | Software Services, Programming Courses & Placement Hub{% endblock %}</title>
+  <meta name="description" content="Dusent Soft Tech - Technology, Skills, Opportunities. Leading tech startup offering software engineering services, programming courses in all languages, and 100% placement training.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="{% static 'website/images/logo.jpg' %}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Preload Critical Logo for Fast LCP -->
+  <link rel="preload" as="image" href="{% static 'website/images/logo.jpg' %}" type="image/jpeg" fetchpriority="high">
+
+  <!-- Three.js 3D Engine Library (deferred to prevent render blocking) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- Custom CSS with Cache-Busting Version -->
+  <link rel="stylesheet" href="{% static 'website/css/styles.css' %}?v=3.2.0">
+
+  <!-- Critical Styles: Guarantee Mobile Drawer is strictly hidden on desktop even if cache is stale -->
+  <style>
+    @media (min-width: 993px) {
+      #mobile-nav-drawer,
+      #mobile-nav-backdrop,
+      #mobile-menu-toggle,
+      .mobile-menu-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        left: -99999px !important;
+        top: -99999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        opacity: 0 !important;
+        overflow: hidden !important;
+      }
+    }
+  </style>
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+  <!-- Fullscreen Interactive 3D WebGL Background Canvas -->
+  <canvas id="cinematic-3d-canvas"></canvas>
+
+  <!-- Ambient Dynamic Mouse Glow Follower -->
+  <div id="cursor-glow-orb"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="{% url 'website:index' %}" class="brand-logo">
+        <img src="{% static 'website/images/logo.jpg' %}" alt="Dusent Soft Tech Logo" class="brand-logo-img" width="48" height="48" fetchpriority="high">
+        <div class="brand-text-group">
+          <span class="brand-name">DUSENT <span class="gradient-text">SOFT TECH</span></span>
+          <span class="brand-tagline">TECHNOLOGY • SKILLS • OPPORTUNITIES</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="{% url 'website:index' %}" class="nav-link">Home</a></li>
+        <li><a href="{% url 'website:about' %}" class="nav-link">About</a></li>
+        
+        <!-- Services Dropdown (All Services, Courses, Software Dev, Training Providing) -->
+        <li class="nav-dropdown">
+          <a href="{% url 'website:services' %}" class="nav-link dropdown-toggle" style="color: var(--accent-cyan); font-weight: 700;">
+            <span>Services</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+          <ul class="dropdown-menu glass-panel-3d">
+            <li>
+              <a href="{% url 'website:services' %}" class="dropdown-item" style="border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 4px;">
+                <span class="dropdown-icon">🚀</span>
+                <div>
+                  <strong>All Services Overview</strong>
+                  <p>12 Tech & Training Solutions</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'website:courses' %}" class="dropdown-item">
+                <span class="dropdown-icon">💻</span>
+                <div>
+                  <strong>i. Programming Courses</strong>
+                  <p>Python, Java, C++, AI & Web Dev</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'website:software_dev' %}" class="dropdown-item">
+                <span class="dropdown-icon">⚡</span>
+                <div>
+                  <strong>ii. Software Development</strong>
+                  <p>Custom Web, Mobile & Cloud Solutions</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'website:training' %}" class="dropdown-item">
+                <span class="dropdown-icon">🎓</span>
+                <div>
+                  <strong>iii. Training Providing</strong>
+                  <p>100% Guaranteed Placement Program</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="padding: 10px 24px;">Contact Page</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay Backdrop -->
+  <div id="mobile-nav-backdrop" class="mobile-nav-backdrop"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="{% static 'website/images/logo.jpg' %}" alt="Dusent Soft Tech Logo" class="brand-logo-img" width="38" height="38" loading="lazy">
+        <div class="brand-text-group">
+          <span class="brand-name" style="font-size: 1.05rem;">DUSENT <span class="gradient-text">SOFT TECH</span></span>
+          <span class="brand-tagline" style="font-size: 0.55rem;">CAREERS • IT SOLUTIONS</span>
+        </div>
+      </div>
+      <button id="close-mobile-nav" class="close-mobile-nav-btn" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <nav class="mobile-menu-list">
+        <a href="{% url 'website:index' %}" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="{% url 'website:about' %}" class="mobile-nav-link">
+          <span class="mobile-nav-icon">ℹ️</span>
+          <span>About Us</span>
+        </a>
+        
+        <!-- Services Accordion in Mobile Menu -->
+        <div class="mobile-nav-accordion" id="mobile-nav-accordion">
+          <button type="button" class="mobile-accordion-toggle" id="mobile-services-toggle">
+            <span style="display: flex; align-items: center; gap: 14px;">
+              <span class="mobile-nav-icon">🚀</span>
+              <span style="font-weight: 600;">Services</span>
+            </span>
+            <svg class="accordion-arrow" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content" id="mobile-services-content">
+            <a href="{% url 'website:services' %}" class="mobile-subnav-link">
+              <span>🚀</span> All Services Overview
+            </a>
+            <a href="{% url 'website:courses' %}" class="mobile-subnav-link">
+              <span>💻</span> i. Programming Courses
+            </a>
+            <a href="{% url 'website:software_dev' %}" class="mobile-subnav-link">
+              <span>⚡</span> ii. Software Development
+            </a>
+            <a href="{% url 'website:training' %}" class="mobile-subnav-link">
+              <span>🎓</span> iii. 100% Placement Training
+            </a>
+          </div>
+        </div>
+
+        <a href="{% url 'website:courses' %}" class="mobile-nav-link">
+          <span class="mobile-nav-icon">💻</span>
+          <span>Programming Courses</span>
+        </a>
+        <a href="{% url 'website:training' %}" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🎓</span>
+          <span>Placement Training</span>
+        </a>
+        <a href="{% url 'website:software_dev' %}" class="mobile-nav-link">
+          <span class="mobile-nav-icon">⚡</span>
+          <span>Software Development</span>
+        </a>
+        <a href="{% url 'website:contact' %}" class="mobile-nav-link">
+          <span class="mobile-nav-icon">📞</span>
+          <span>Contact Us</span>
+        </a>
+      </nav>
+
+      <!-- Quick Action Buttons in Drawer -->
+      <div class="mobile-drawer-actions">
+        <a href="https://wa.me/918825645950?text=Hello%20DUSENT%20SOFT%20TECH,%20I%20have%20an%20enquiry" target="_blank" class="mobile-action-btn mobile-whatsapp-btn">
+          <span>💬</span> Chat on WhatsApp
+        </a>
+        <a href="tel:+918825645950" class="mobile-action-btn mobile-call-btn">
+          <span>📞</span> Call +91 88256 45950
+        </a>
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center; padding: 12px;">
+          🚀 Send Enquiry Form
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Block -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Floating 3D Technical Boy Avatar Assistant Widget -->
+  <button id="floating-mascot-btn" class="floating-mascot-btn" title="Ask Alex - Code Buddy">
+    <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="45" fill="#00F2FE" opacity="0.2"/>
+      <!-- Headphones -->
+      <path d="M 20 50 A 30 30 0 0 1 80 50" stroke="#00F2FE" stroke-width="7" stroke-linecap="round"/>
+      <rect x="14" y="44" width="12" height="20" rx="6" fill="#8B5CF6"/>
+      <rect x="74" y="44" width="12" height="20" rx="6" fill="#8B5CF6"/>
+      <!-- Face -->
+      <circle cx="50" cy="52" r="22" fill="#FFE0BD"/>
+      <circle cx="42" cy="48" r="3" fill="#0A0E1A"/>
+      <circle cx="58" cy="48" r="3" fill="#0A0E1A"/>
+      <path d="M 44 58 Q 50 64 56 58" stroke="#0A0E1A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <!-- Hoodie & Glasses -->
+      <path d="M 32 38 Q 50 30 68 38" stroke="#3B82F6" stroke-width="4" fill="none"/>
+    </svg>
+  </button>
+
+  <div id="floating-assistant-modal" class="floating-assistant-modal">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-emerald);"></span>
+        <strong style="font-size: 1rem; color: #fff;">Alex - Code Buddy</strong>
+      </div>
+      <button id="close-mascot-modal" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+    <p style="font-size: 0.88rem; margin-bottom: 16px;">
+      "Hey there! I'm Alex. Need help picking a programming course or launching a software project?"
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="{% url 'website:courses' %}" class="btn btn-outline" style="font-size: 0.82rem; padding: 8px 14px; text-align: left; justify-content: flex-start;">
+        💻 i. Programming Courses (Python, Java, C++)
+      </a>
+      <a href="{% url 'website:software_dev' %}" class="btn btn-outline" style="font-size: 0.82rem; padding: 8px 14px; text-align: left; justify-content: flex-start;">
+        ⚡ ii. Enterprise Software Development
+      </a>
+      <a href="{% url 'website:training' %}" class="btn btn-outline" style="font-size: 0.82rem; padding: 8px 14px; text-align: left; justify-content: flex-start;">
+        🎓 iii. 100% Placement Training Hub
+      </a>
+      <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="font-size: 0.82rem; padding: 8px 14px; text-align: left; justify-content: flex-start;">
+        🚀 Contact & Submit Application
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer Section 10 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <img src="{% static 'website/images/logo.jpg' %}" alt="Dusent Soft Tech Logo" class="brand-logo-img" width="52" height="52" loading="lazy">
+            <div class="brand-text-group">
+              <span class="brand-name" style="font-size: 1.3rem;">DUSENT <span class="gradient-text">SOFT TECH</span></span>
+              <span class="brand-tagline">EMPOWERING CAREERS. BUILDING DIGITAL SOLUTIONS.</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; max-width: 340px; margin-bottom: 20px;">
+            DUSENT SOFT TECH connects students, job seekers, businesses, and technology through industry-focused training and innovative IT solutions.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="{% url 'website:index' %}">Home</a></li>
+            <li><a href="{% url 'website:about' %}">About Us</a></li>
+            <li><a href="{% url 'website:services' %}">All Services</a></li>
+            <li><a href="{% url 'website:courses' %}">Programming Courses</a></li>
+            <li><a href="{% url 'website:training' %}">Placement Training</a></li>
+            <li><a href="{% url 'website:software_dev' %}">Software Development</a></li>
+            <li><a href="{% url 'website:contact' %}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>What We Do</h4>
+          <ul class="footer-links">
+            <li><a href="{% url 'website:training' %}">🎓 Placement Training</a></li>
+            <li><a href="{% url 'website:software_dev' %}">💻 Website Development</a></li>
+            <li><a href="{% url 'website:software_dev' %}">⚡ Web Applications</a></li>
+            <li><a href="{% url 'website:software_dev' %}">📱 Mobile Applications</a></li>
+            <li><a href="{% url 'website:software_dev' %}">🛠️ Software Development</a></li>
+            <li><a href="{% url 'website:software_dev' %}">🎨 UI/UX Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:dusentsofttech55@gmail.com">📧 Email: dusentsofttech55@gmail.com</a></li>
+            <li><a href="https://wa.me/918825645950" target="_blank">📱 Phone / WhatsApp: +91 88256 45950</a></li>
+            <li><a href="https://maps.app.goo.gl/UYHAP8jDsYQpA1uE7?g_st=ac" target="_blank">📍 Location: View on Google Maps ↗</a></li>
+            <li><a href="{% url 'website:index' %}">🌐 Website: www.dusentsofttech.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DUSENT SOFT TECH. Empowering Careers. Building Digital Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript with Cache-Busting Version -->
+  <script src="{% static 'website/js/main.js' %}?v=3.2.0"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

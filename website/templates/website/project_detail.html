@@ -1,0 +1,64 @@
+{% extends 'website/base.html' %}
+
+{% block title %}{{ project.title }} | Dusent Soft Tech Case Study{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top: 140px;">
+  <div class="container">
+    <a href="{% url 'website:index' %}#portfolio" style="color: var(--accent-cyan); display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; font-weight: 600;">
+      ← Back to Portfolio Gallery
+    </a>
+
+    <div class="glass-panel" style="padding: 50px; margin-bottom: 50px;">
+      <div style="height: 300px; background: {{ project.image_gradient }}; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 40px;">
+        <span class="media-tag" style="top: 24px; left: 24px; font-size: 0.9rem;">{{ project.get_category_display }}</span>
+        <h1 style="color: #fff; font-size: 3rem; text-shadow: 0 4px 20px rgba(0,0,0,0.6);">{{ project.title }}</h1>
+      </div>
+
+      <div class="project-detail-grid">
+        <div>
+          <h2 style="font-size: 1.8rem; margin-bottom: 16px;">Project Overview</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">{{ project.short_description }}</p>
+
+          {% if project.full_description %}
+            <h3 style="font-size: 1.4rem; margin-bottom: 12px;">Architecture & Key Features</h3>
+            <p style="line-height: 1.8; margin-bottom: 30px;">{{ project.full_description }}</p>
+          {% else %}
+            <h3 style="font-size: 1.4rem; margin-bottom: 12px;">Key Engineering Highlights</h3>
+            <ul style="line-height: 1.8; margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+              <li>High-throughput Django REST API processing real-time payloads.</li>
+              <li>PostgreSQL database schema with optimized indexing for zero latency.</li>
+              <li>Dockerized container deployment with auto-scaling cloud infrastructure.</li>
+            </ul>
+          {% endif %}
+        </div>
+
+        <div class="glass-panel" style="padding: 30px; border-color: var(--border-glow); height: fit-content;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 12px;">Project Metadata</h3>
+          
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Client</div>
+            <div style="font-weight: 600; font-size: 1rem;">{{ project.client_name }}</div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Category</div>
+            <div style="font-weight: 600; font-size: 1rem;">{{ project.get_category_display }}</div>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Technologies Used</div>
+            <div class="portfolio-tech">
+              {% for tag in project.get_tags %}
+                <span class="tech-badge">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          <a href="{% url 'website:index' %}#contact" class="btn btn-primary" style="width: 100%;">Build Similar System</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

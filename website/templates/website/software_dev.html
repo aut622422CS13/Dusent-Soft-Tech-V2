@@ -1,0 +1,306 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}IT & Technology Services | DUSENT SOFT TECH - Web, App & Software Development{% endblock %}
+
+{% block content %}
+
+<!-- Hero Header -->
+<section class="hero" style="padding: 140px 0 40px;">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-tag" style="margin-bottom: 20px;">
+        <span class="pulse-dot"></span>
+        <span>OUR SERVICES • IT & TECHNOLOGY SOLUTIONS</span>
+      </div>
+      <h1 class="hero-title" style="font-size: 3.2rem;">
+        Technology & Training Solutions <span class="gradient-text">That Create Real Value</span>
+      </h1>
+      <p style="font-size: 1.15rem; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-main);">
+        At <strong>DUSENT SOFT TECH</strong>, we provide technology services and industry-focused training designed to help <strong>businesses grow, institutions transform, and individuals build successful careers</strong>.
+      </p>
+      <p style="font-size: 0.98rem; max-width: 900px; margin: 12px auto 0; line-height: 1.7; color: var(--text-muted);">
+        From building digital products to developing industry-ready talent, we provide practical solutions based on real-world requirements.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 💻 IT & Technology Services Section (Services 1 to 6) -->
+<section id="it-services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">ENTERPRISE IT DIVISION</div>
+      <h2 class="section-title">💻 <span class="gradient-text">IT & Technology Services</span></h2>
+    </div>
+
+    <div class="responsive-card-grid">
+      
+      <!-- 1. Website Development -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">🌐</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">1. Website Development</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px; font-weight: 600;">
+            Build a professional online presence with modern, responsive, and user-friendly websites.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 10px;">Our services include:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+            <li>✓ Business Websites</li>
+            <li>✓ Corporate Websites</li>
+            <li>✓ Portfolio Websites</li>
+            <li>✓ Landing Pages</li>
+            <li>✓ Educational Sites</li>
+            <li>✓ Restaurant Sites</li>
+            <li>✓ E-Commerce Sites</li>
+            <li>✓ Maintenance</li>
+          </ul>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 20px;">
+            <strong>Technologies:</strong> HTML, CSS, JavaScript, React, Django, & modern web stacks.
+          </p>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Explore Web Development →</a>
+      </div>
+
+      <!-- 2. Web Application Development -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">⚡</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gold-gradient-text">2. Web Application Development</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px; font-weight: 600;">
+            We develop customized web applications to help businesses manage their operations digitally.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; margin-bottom: 10px;">Solutions include:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Management Systems</li>
+            <li>✓ Admin Dashboards</li>
+            <li>✓ Employee Systems</li>
+            <li>✓ Attendance Systems</li>
+            <li>✓ CRM Applications</li>
+            <li>✓ LMS Platforms</li>
+            <li>✓ Booking Systems</li>
+            <li>✓ Custom SaaS Apps</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Discuss Your Web Application →</a>
+      </div>
+
+      <!-- 3. Software Development -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">🛠️</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">3. Software Development</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px; font-weight: 600;">
+            We create customized software solutions based on specific business requirements.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-violet); font-weight: 700; margin-bottom: 10px;">We can develop:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Business Software</li>
+            <li>✓ ERP Solutions</li>
+            <li>✓ Billing Systems</li>
+            <li>✓ Inventory Systems</li>
+            <li>✓ Expense Software</li>
+            <li>✓ Customer Tools</li>
+            <li>✓ Enterprise Apps</li>
+            <li>✓ Custom Modules</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Build Your Software →</a>
+      </div>
+
+      <!-- 4. Mobile Application Development -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">📱</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">4. Mobile Application Development</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px; font-weight: 600;">
+            Turn your business idea into a mobile application.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 700; margin-bottom: 10px;">Our mobile solutions include:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Android Applications</li>
+            <li>✓ Business Mobile Apps</li>
+            <li>✓ Service Applications</li>
+            <li>✓ Booking Mobile Apps</li>
+            <li>✓ Customer Apps</li>
+            <li>✓ Custom Mobile Tech</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Discuss Your App Idea →</a>
+      </div>
+
+      <!-- 5. UI/UX Design -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">🎨</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gold-gradient-text">5. UI/UX Design</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px; font-weight: 600;">
+            Create digital experiences that are simple, attractive, and easy to use.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-pink); font-weight: 700; margin-bottom: 10px;">Our design services include:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Website UI Design</li>
+            <li>✓ Mobile App UI</li>
+            <li>✓ Dashboard Design</li>
+            <li>✓ UX Research</li>
+            <li>✓ Wireframes</li>
+            <li>✓ Prototypes</li>
+            <li>✓ Design Systems</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Start Your Design →</a>
+      </div>
+
+      <!-- 6. Business Automation -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">⚙️</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">6. Business Automation</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px; font-weight: 600;">
+            Reduce manual work and improve business efficiency through automation.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 10px;">We automate processes such as:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Data Management</li>
+            <li>✓ Employee Operations</li>
+            <li>✓ Customer Systems</li>
+            <li>✓ Automated Reports</li>
+            <li>✓ Notification Systems</li>
+            <li>✓ Workflow Automation</li>
+            <li>✓ Digital Forms</li>
+            <li>✓ Business Processes</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Automate Your Business →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🤝 IT Consulting & Maintenance (Services 11 & 12) -->
+<section id="consulting-maintenance" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">ADVISORY & SUPPORT</div>
+      <h2 class="section-title">🤝 <span class="gradient-text">IT Consulting & Support</span></h2>
+    </div>
+
+    <div class="responsive-grid-2col">
+      
+      <!-- 11. IT Consulting -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">💡</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">11. IT Consulting</h3>
+        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+          Not sure what technology your business needs? We help you understand your requirements and identify suitable technology solutions.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 10px;">Consulting areas include:</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-muted);">
+          <li>✓ Technology Planning & Roadmaps</li>
+          <li>✓ Website & Application Architecture</li>
+          <li>✓ Software System Architecture</li>
+          <li>✓ Digital Transformation Strategy</li>
+          <li>✓ Database Planning & Optimization</li>
+          <li>✓ Business Process Automation Planning</li>
+          <li>✓ Technology Selection & Stack Guidance</li>
+        </ul>
+      </div>
+
+      <!-- 12. Website & Application Maintenance -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="font-size: 2.4rem; margin-bottom: 12px;">🔧</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gold-gradient-text">12. Website & Application Maintenance</h3>
+        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+          Already have a website or application? We can help maintain, improve, and update your existing digital systems.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; margin-bottom: 10px;">Support includes:</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-muted);">
+          <li>✓ Bug Fixing & Error Debugging</li>
+          <li>✓ Performance Improvements & Speed Tuning</li>
+          <li>✓ New Feature Additions & Enhancements</li>
+          <li>✓ Security Updates & Vulnerability Patches</li>
+          <li>✓ Database Maintenance & Backup Support</li>
+          <li>✓ Content & Layout Updates</li>
+          <li>✓ Ongoing Technical Assistance & Helpline</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🚀 Our Service Process -->
+<section id="service-process" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">METHODOLOGY</div>
+      <h2 class="section-title">🚀 Our <span class="gradient-text">Service Process</span></h2>
+    </div>
+
+    <div class="responsive-grid-6col">
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-cyan); margin-bottom: 8px;">01</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Understand</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">We understand your requirements, goals, and challenges.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-violet); margin-bottom: 8px;">02</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Plan</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">We create a suitable solution and development/training plan.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-amber); margin-bottom: 8px;">03</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Build / Train</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">Our team develops the solution or delivers the required training.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-emerald); margin-bottom: 8px;">04</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Test & Improve</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">We evaluate the result and make necessary improvements.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-pink); margin-bottom: 8px;">05</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Deliver</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">We provide the final solution or complete the training program.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-cyan); margin-bottom: 8px;">06</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Support</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">We continue to provide support and assistance when required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section id="services-cta" class="section">
+  <div class="container">
+    <div class="glass-panel-3d" data-tilt style="padding: 50px 40px; text-align: center; max-width: 950px; margin: 0 auto; background: radial-gradient(circle at center, rgba(0, 242, 254, 0.12) 0%, rgba(17, 24, 39, 0.95) 70%); border-color: var(--border-glow);">
+      <h2 style="font-size: 2.6rem; margin-bottom: 12px;" class="gradient-text">Let's Build Something Together</h2>
+      <p style="font-size: 1.08rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 24px; line-height: 1.7;">
+        Whether you need a <strong>website, software solution, business automation, technical training, internship, or placement training</strong>, DUSENT SOFT TECH is ready to work with you.
+      </p>
+      <h3 style="font-size: 1.2rem; color: var(--accent-cyan); font-weight: 800; margin-bottom: 30px;">
+        Empowering Careers. Building Digital Solutions.
+      </h3>
+
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="{% url 'website:courses' %}" class="btn btn-accent btn-glow-3d" style="padding: 14px 32px; font-size: 1rem;">
+          Get Started →
+        </a>
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="padding: 14px 32px; font-size: 1rem;">
+          Contact Us →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

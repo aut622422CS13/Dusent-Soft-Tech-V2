@@ -1,0 +1,490 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Dusent Soft Tech | Empowering Careers. Building Digital Solutions.{% endblock %}
+
+{% block content %}
+
+<!-- 1. Hero Section -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text-content">
+        <div class="badge-tag">
+          <span class="pulse-dot"></span>
+          <span>DUSENT SOFT TECH • TRAINING & IT SOLUTIONS</span>
+        </div>
+
+        <h1 class="hero-title">
+          Empowering Careers. <span class="gradient-text">Building Digital Solutions.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          <strong>DUSENT SOFT TECH</strong> connects students, job seekers, businesses, and technology through industry-focused training and innovative IT solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a href="{% url 'website:courses' %}" class="btn btn-accent btn-glow-3d">
+            <span>Explore Our Services</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+          <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- 3D Technical Boy Avatar Mascot Hologram Portal -->
+      <div class="mascot-stage">
+        <!-- 3D Perspective Glowing Portal Rings -->
+        <div class="portal-ring ring-3d-1"></div>
+        <div class="portal-ring ring-3d-2"></div>
+        <div class="portal-ring ring-3d-3"></div>
+
+        <!-- Floating 3D Tech Orbs around Avatar -->
+        <div class="floating-tech-pill pill-1"><img src="{% static 'website/images/tech/python.svg' %}" alt="Python" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"> Python 3.13</div>
+        <div class="floating-tech-pill pill-2"><img src="{% static 'website/images/tech/pytorch.svg' %}" alt="AI/ML" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"> AI & ML</div>
+        <div class="floating-tech-pill pill-3"><img src="{% static 'website/images/tech/java.svg' %}" alt="Java" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"> Java 21</div>
+        <div class="floating-tech-pill pill-4"><img src="{% static 'website/images/tech/react.svg' %}" alt="React" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"> Full-Stack</div>
+
+        <div class="mascot-avatar-card glass-panel-3d" data-tilt>
+          <div class="mascot-speech-bubble" id="mascot-speech-bubble">
+            Empowering Careers & Building Digital Solutions! 🚀
+          </div>
+
+          <div class="mascot-svg-wrapper">
+            <svg viewBox="0 0 200 200" width="100%" height="100%">
+              <circle cx="100" cy="100" r="88" fill="none" stroke="#00F2FE" stroke-width="2" stroke-dasharray="8,6" opacity="0.8"/>
+              <circle cx="100" cy="100" r="76" fill="url(#avatarGlow)" opacity="0.35"/>
+              
+              <defs>
+                <radialGradient id="avatarGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#00F2FE"/>
+                  <stop offset="60%" stop-color="#8B5CF6"/>
+                  <stop offset="100%" stop-color="#1E1B4B" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1E3A8A"/>
+                  <stop offset="50%" stop-color="#3B82F6"/>
+                  <stop offset="100%" stop-color="#8B5CF6"/>
+                </linearGradient>
+              </defs>
+
+              <path d="M 38 100 A 62 62 0 0 1 162 100" stroke="#00F2FE" stroke-width="12" stroke-linecap="round" fill="none" filter="drop-shadow(0 0 8px #00F2FE)"/>
+              <rect x="26" y="86" width="24" height="40" rx="12" fill="#8B5CF6" stroke="#00F2FE" stroke-width="3"/>
+              <rect x="150" y="86" width="24" height="40" rx="12" fill="#8B5CF6" stroke="#00F2FE" stroke-width="3"/>
+
+              <circle cx="100" cy="105" r="44" fill="#FFD1A4"/>
+              <path d="M 56 90 Q 100 40 144 90 Q 122 68 100 70 Q 78 68 56 90 Z" fill="#1E1B4B"/>
+
+              <rect x="66" y="94" width="28" height="22" rx="7" fill="rgba(0,242,254,0.2)" stroke="#00F2FE" stroke-width="3"/>
+              <rect x="106" y="94" width="28" height="22" rx="7" fill="rgba(0,242,254,0.2)" stroke="#00F2FE" stroke-width="3"/>
+              <line x1="94" y1="105" x2="106" y2="105" stroke="#00F2FE" stroke-width="3"/>
+
+              <circle cx="80" cy="105" r="4.5" fill="#0A0E1A"/>
+              <circle cx="120" cy="105" r="4.5" fill="#0A0E1A"/>
+              <circle cx="82" cy="103" r="1.5" fill="#FFFFFF"/>
+              <circle cx="122" cy="103" r="1.5" fill="#FFFFFF"/>
+              <path d="M 88 126 Q 100 138 112 126" stroke="#0A0E1A" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+              <path d="M 48 160 C 48 138, 152 138, 152 160 L 165 200 L 35 200 Z" fill="url(#hoodieGrad)"/>
+              <text x="100" y="180" font-size="17" font-weight="900" fill="#00F2FE" text-anchor="middle" letter-spacing="1">&lt;/&gt;</text>
+            </svg>
+          </div>
+
+          <div class="mascot-name gradient-text">Alex - Technical Mentor</div>
+          <div class="mascot-title">Dusent Soft Tech Mascot</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Landscape Infinite Tech Stack Marquee -->
+<section class="landscape-marquee-section">
+  <div class="marquee-title">TECHNOLOGY ECOSYSTEM & INDUSTRY TOOLS</div>
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/python.svg' %}" style="width: 20px; height: 20px;"> Python 3.13</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/java.svg' %}" style="width: 20px; height: 20px;"> Java 21 & Spring Boot</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/cpp.svg' %}" style="width: 20px; height: 20px;"> C++ & DSA</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/react.svg' %}" style="width: 20px; height: 20px;"> React.js & Frontend</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/django.svg' %}" style="width: 20px; height: 20px;"> Django 5 Backend</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/pytorch.svg' %}" style="width: 20px; height: 20px;"> AI / Machine Learning</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/nodejs.svg' %}" style="width: 20px; height: 20px;"> Node.js Microservices</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/aws.svg' %}" style="width: 20px; height: 20px;"> AWS Cloud DevOps</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/cybersecurity.svg' %}" style="width: 20px; height: 20px;"> Cyber Security</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/docker.svg' %}" style="width: 20px; height: 20px;"> Docker & Kubernetes</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/flutter.svg' %}" style="width: 20px; height: 20px;"> Mobile Flutter</div>
+      
+      <!-- Duplicate for infinite loop -->
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/python.svg' %}" style="width: 20px; height: 20px;"> Python 3.13</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/java.svg' %}" style="width: 20px; height: 20px;"> Java 21 & Spring Boot</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/cpp.svg' %}" style="width: 20px; height: 20px;"> C++ & DSA</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/react.svg' %}" style="width: 20px; height: 20px;"> React.js & Frontend</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/django.svg' %}" style="width: 20px; height: 20px;"> Django 5 Backend</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/pytorch.svg' %}" style="width: 20px; height: 20px;"> AI / Machine Learning</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/nodejs.svg' %}" style="width: 20px; height: 20px;"> Node.js Microservices</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/aws.svg' %}" style="width: 20px; height: 20px;"> AWS Cloud DevOps</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/cybersecurity.svg' %}" style="width: 20px; height: 20px;"> Cyber Security</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/docker.svg' %}" style="width: 20px; height: 20px;"> Docker & Kubernetes</div>
+      <div class="marquee-badge"><img src="{% static 'website/images/tech/flutter.svg' %}" style="width: 20px; height: 20px;"> Mobile Flutter</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. About DUSENT SOFT TECH -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">2. ABOUT DUSENT SOFT TECH</div>
+      <h2 class="section-title">Who <span class="gradient-text">We Are</span></h2>
+    </div>
+    <div class="glass-panel-3d" data-tilt style="padding: 40px; text-align: center; max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 1.25rem; line-height: 1.8; color: var(--text-main);">
+        <strong>DUSENT SOFT TECH</strong> is a technology and placement training company focused on developing industry-ready talent and delivering reliable digital solutions for businesses.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. What We Do — 2 Main Sections -->
+<section id="what-we-do" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">3. WHAT WE DO</div>
+      <h2 class="section-title">Our <span class="gradient-text">Core Divisions</span></h2>
+    </div>
+
+    <div class="responsive-grid-2col">
+      <!-- Section 3.i: Placement Training -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <span style="font-size: 2.2rem;">🎓</span>
+          <div>
+            <h3 style="font-size: 1.6rem;" class="gradient-text">Placement Training</h3>
+            <span style="font-size: 0.85rem; color: var(--accent-cyan);">Career Development Track</span>
+          </div>
+        </div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Technical Training (Python, Java, C++, Web)
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Aptitude & Reasoning Drills
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> 1-on-1 Interview Preparation & Mock Sessions
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Soft Skills & Communication Training
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Industry-Oriented Live Projects
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Guaranteed Placement Assistance Drives
+          </li>
+        </ul>
+        <div style="margin-top: 28px;">
+          <a href="{% url 'website:training' %}" class="btn btn-outline" style="width: 100%;">Explore Placement Training →</a>
+        </div>
+      </div>
+
+      <!-- Section 3.ii: IT Solutions -->
+      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <span style="font-size: 2.2rem;">💻</span>
+          <div>
+            <h3 style="font-size: 1.6rem;" class="gold-gradient-text">IT Solutions</h3>
+            <span style="font-size: 0.85rem; color: var(--accent-amber);">Enterprise Software Division</span>
+          </div>
+        </div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Website Development (Responsive & Modern)
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Custom Web Applications (SaaS & Cloud)
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Mobile Applications (iOS & Android)
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Bespoke Software Development
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> UI/UX Design & User Experience
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Database & Backend Solutions
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
+            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Business Automation & Workflows
+          </li>
+        </ul>
+        <div style="margin-top: 28px;">
+          <a href="{% url 'website:software_dev' %}" class="btn btn-outline" style="width: 100%;">Explore IT Solutions →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Why Choose Us? -->
+<section id="why-us" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">4. WHY CHOOSE US?</div>
+      <h2 class="section-title">Built for <span class="gradient-text">Excellence & Growth</span></h2>
+    </div>
+
+    <div class="responsive-card-grid">
+      <div class="glass-panel-3d" data-tilt style="padding: 28px;">
+        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-cyan);">📚</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Industry-Oriented Learning</h3>
+        <p style="font-size: 0.9rem;">Curriculum aligned with current industry standards and recruiter demands.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px;">
+        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-violet);">🛠️</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Practical Project Experience</h3>
+        <p style="font-size: 0.9rem;">Hands-on coding on real client projects to build robust portfolio proof.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px;">
+        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-amber);">👨‍💻</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Skilled Trainers & Developers</h3>
+        <p style="font-size: 0.9rem;">Mentorship by seasoned software engineers and industry practitioners.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px;">
+        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-emerald);">⚙️</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Customized Solutions</h3>
+        <p style="font-size: 0.9rem;">Tailored IT solutions and learning roadmaps built around specific goals.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px;">
+        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-pink);">🎯</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Career-Focused Approach</h3>
+        <p style="font-size: 0.9rem;">Clear focus on employability, job placement, and career advancement.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px;">
+        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-cyan);">🤝</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Continuous Support</h3>
+        <p style="font-size: 0.9rem;">24/7 mentor assistance, code reviews, and post-placement guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Our Process -->
+<section id="process" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">5. OUR PROCESS</div>
+      <h2 class="section-title">A Proven <span class="gradient-text">6-Step Methodology</span></h2>
+      <p>How we train candidates and deliver successful client IT software projects.</p>
+    </div>
+
+    <div class="responsive-grid-6col">
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div class="step-number" style="margin: 0 auto 12px;">1</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Understand</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">Gather requirements & goals.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div class="step-number" style="margin: 0 auto 12px;">2</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Plan</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">Architect roadmap & stack.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div class="step-number" style="margin: 0 auto 12px;">3</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Develop / Train</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">Execute sprints & modules.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div class="step-number" style="margin: 0 auto 12px;">4</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Test & Improve</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">QA & interview drills.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div class="step-number" style="margin: 0 auto 12px;">5</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Deliver</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">Deployment & placements.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 20px; text-align: center;">
+        <div class="step-number" style="margin: 0 auto 12px;">6</div>
+        <h4 style="font-size: 1.05rem; color: #fff;">Support</h4>
+        <p style="font-size: 0.78rem; margin-top: 6px;">Ongoing maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Who We Serve -->
+<section id="who-we-serve" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">6. WHO WE SERVE</div>
+      <h2 class="section-title">Empowering <span class="gradient-text">Every Stakeholder</span></h2>
+    </div>
+
+    <div class="responsive-card-grid">
+      <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
+        <span style="font-size: 2.4rem;">🎓</span>
+        <div>
+          <h4 style="font-size: 1.2rem; color: #fff;">Students</h4>
+          <p style="font-size: 0.85rem;">College students seeking practical coding skills.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
+        <span style="font-size: 2.4rem;">👨‍💻</span>
+        <div>
+          <h4 style="font-size: 1.2rem; color: #fff;">Job Seekers</h4>
+          <p style="font-size: 0.85rem;">Graduates aiming for high-paying tech jobs.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
+        <span style="font-size: 2.4rem;">🏫</span>
+        <div>
+          <h4 style="font-size: 1.2rem; color: #fff;">Colleges & Institutions</h4>
+          <p style="font-size: 0.85rem;">Academic partners for placement training drives.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
+        <span style="font-size: 2.4rem;">🏢</span>
+        <div>
+          <h4 style="font-size: 1.2rem; color: #fff;">Startups</h4>
+          <p style="font-size: 0.85rem;">Emerging companies needing MVP development.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
+        <span style="font-size: 2.4rem;">🏭</span>
+        <div>
+          <h4 style="font-size: 1.2rem; color: #fff;">Businesses</h4>
+          <p style="font-size: 0.85rem;">SMBs seeking digital transformation.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
+        <span style="font-size: 2.4rem;">🤝</span>
+        <div>
+          <h4 style="font-size: 1.2rem; color: #fff;">Corporate Clients</h4>
+          <p style="font-size: 0.85rem;">Enterprise clients needing IT outsourcing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Featured Services -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">7. FEATURED SERVICES</div>
+      <h2 class="section-title">High-Impact <span class="gradient-text">Core Offerings</span></h2>
+    </div>
+
+    <div class="responsive-card-grid">
+      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
+        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-cyan);">🌐</div>
+        <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Web Development</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6;">Modern, responsive websites for businesses built with scalable web architecture.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
+        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-amber);">🎓</div>
+        <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Placement Training</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6;">Industry-focused training designed to improve employability and secure software offers.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
+        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-violet);">🛠️</div>
+        <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Software Development</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6;">Customized software solutions tailored specifically for growing business needs.</p>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
+        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-emerald);">💡</div>
+        <h3 style="font-size: 1.35rem; margin-bottom: 10px;">IT Consulting</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6;">Strategic technology guidance for organizations, institutions, and tech startups.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 9. Client / Partner Section -->
+<section id="partners" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">9. TRUSTED BY / OUR PARTNERS</div>
+      <h2 class="section-title">Hiring Partners & <span class="gradient-text">College Alliances</span></h2>
+      <p>We work with leading IT firms, startups, and academic institutions.</p>
+    </div>
+
+    <div class="responsive-card-grid-sm">
+      <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
+        <span style="font-size: 1.8rem;">🏢</span>
+        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-cyan);">TechCorp Global</h4>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
+        <span style="font-size: 1.8rem;">🏫</span>
+        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-violet);">City Tech University</h4>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
+        <span style="font-size: 1.8rem;">🚀</span>
+        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-amber);">CloudScale Labs</h4>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
+        <span style="font-size: 1.8rem;">⚙️</span>
+        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-emerald);">DevNexus Systems</h4>
+      </div>
+
+      <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
+        <span style="font-size: 1.8rem;">🎓</span>
+        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-pink);">Apex Engineering College</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Call-to-Action Section -->
+<section id="cta" class="section">
+  <div class="container">
+    <div class="glass-panel-3d" data-tilt style="padding: 60px 40px; text-align: center; background: radial-gradient(circle at center, rgba(0, 242, 254, 0.12) 0%, rgba(17, 24, 39, 0.95) 70%); border-color: var(--border-glow);">
+      <div class="section-subtitle">8. READY TO BUILD YOUR FUTURE WITH US?</div>
+      <h2 style="font-size: 2.8rem; margin-bottom: 20px;" class="gradient-text">Ready to Build Your Future With Us?</h2>
+      <p style="font-size: 1.15rem; max-width: 750px; margin: 0 auto 36px; line-height: 1.7;">
+        Whether you're looking to build your career or transform your business with technology, <strong>DUSENT SOFT TECH</strong> is here to help.
+      </p>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <a href="{% url 'website:courses' %}" class="btn btn-accent btn-glow-3d" style="padding: 16px 36px; font-size: 1.05rem;">
+          Start Your Journey →
+        </a>
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="padding: 16px 36px; font-size: 1.05rem;">
+          Talk to Us →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

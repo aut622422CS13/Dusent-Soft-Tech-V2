@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+  <path d="M12 2L2 7.5v9L12 22l10-5.5v-9L12 2z" fill="#00599C"/>
+  <path d="M12 4.5L4 9v6l8 4.5 8-4.5V9l-8-4.5z" fill="#659AD2"/>
+  <text x="12" y="15" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">C++</text>
+</svg>
