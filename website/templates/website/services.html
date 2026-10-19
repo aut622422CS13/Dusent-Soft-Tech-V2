@@ -25,25 +25,25 @@
       </p>
       
       <!-- Quick Navigation Anchors -->
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
-        <a href="#it-services" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 18px;">💻 IT & Tech Services</a>
-        <a href="#training-services" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 18px;">🎓 Training & Careers</a>
-        <a href="#consulting-services" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 18px;">🤝 Consulting & Support</a>
-        <a href="#service-process" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 18px;">🚀 Our Process</a>
+      <div class="services-quick-nav" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+        <a href="#it-services" class="btn btn-secondary section-nav-pill" style="font-size: 0.9rem; padding: 8px 18px;">IT & Tech Services</a>
+        <a href="#training-services" class="btn btn-secondary section-nav-pill" style="font-size: 0.9rem; padding: 8px 18px;">Training & Careers</a>
+        <a href="#consulting-services" class="btn btn-secondary section-nav-pill" style="font-size: 0.9rem; padding: 8px 18px;">Consulting & Support</a>
+        <a href="#service-process" class="btn btn-secondary section-nav-pill" style="font-size: 0.9rem; padding: 8px 18px;">Our Process</a>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- SECTION 1: 💻 IT & Technology Services -->
+<!-- SECTION 1: IT & Technology Services -->
 <section id="it-services" class="section" style="padding: 60px 0;">
   <div class="container">
     <div class="section-header" style="text-align: left; margin-bottom: 40px;">
       <div class="badge-tag" style="background: rgba(0, 242, 254, 0.1); border-color: var(--accent-cyan); color: var(--accent-cyan);">
         <span>DIVISION 01</span>
       </div>
-      <h2 style="font-size: 2.4rem; margin-top: 10px;">💻 IT & Technology Services</h2>
+      <h2 style="font-size: 2.4rem; margin-top: 10px;">IT & Technology Services</h2>
       <p style="color: var(--text-muted); font-size: 1.05rem;">Scalable digital solutions engineered to automate operations and drive business growth.</p>
     </div>
 
@@ -52,7 +52,9 @@
       <!-- 1. Website Development -->
       <div class="glass-panel-3d card-service" data-tilt style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <div class="card-icon" style="background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan);">🌐</div>
+          <div class="card-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          </div>
           <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #fff;">1. Website Development</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
             Build a professional online presence with modern, responsive, and user-friendly websites.
@@ -85,7 +87,9 @@
       <!-- 2. Web Application Development -->
       <div class="glass-panel-3d card-service" data-tilt style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <div class="card-icon" style="background: rgba(111, 66, 193, 0.15); color: #a855f7;">⚡</div>
+          <div class="card-icon icon-violet">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
           <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #fff;">2. Web Application Development</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
             We develop customized web applications to help businesses manage their operations digitally.
@@ -100,7 +104,7 @@
             <li>LMS Platforms & Booking Systems</li>
           </ul>
         </div>
-        <a href="{% url 'website:contact' %}" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; border-color: #a855f7; color: #fff;">
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Discuss Your Web Application →
         </a>
       </div>
@@ -108,7 +112,9 @@
       <!-- 3. Software Development -->
       <div class="glass-panel-3d card-service" data-tilt style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <div class="card-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">🛠️</div>
+          <div class="card-icon icon-amber">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
           <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #fff;">3. Software Development</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
             We create customized software solutions based on specific business requirements.
@@ -131,7 +137,9 @@
       <!-- 4. Mobile Application Development -->
       <div class="glass-panel-3d card-service" data-tilt style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">📱</div>
+          <div class="card-icon icon-emerald">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
           <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #fff;">4. Mobile Application Development</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
             Turn your business idea into a mobile application for iOS and Android.
@@ -146,7 +154,7 @@
             <li>Customized Mobile Solutions</li>
           </ul>
         </div>
-        <a href="{% url 'website:contact' %}" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; border-color: var(--accent-emerald); color: #fff;">
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Discuss Your App Idea →
         </a>
       </div>
@@ -154,7 +162,9 @@
       <!-- 5. UI/UX Design -->
       <div class="glass-panel-3d card-service" data-tilt style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <div class="card-icon" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">🎨</div>
+          <div class="card-icon icon-pink">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4 5 5 0 012-4.24V7a4 4 0 018 0v5.76A5 5 0 0115 17a4 4 0 01-4 4zm0 0v-4m8 4v-4m-4-6h.01"/></svg>
+          </div>
           <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #fff;">5. UI/UX Design</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
             Create digital experiences that are simple, attractive, and easy to use.
@@ -169,7 +179,7 @@
             <li>Design Systems & Guidelines</li>
           </ul>
         </div>
-        <a href="{% url 'website:contact' %}" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; border-color: #ec4899; color: #fff;">
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Start Your Design →
         </a>
       </div>
@@ -177,7 +187,9 @@
       <!-- 6. Business Automation -->
       <div class="glass-panel-3d card-service" data-tilt style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <div class="card-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">🤖</div>
+          <div class="card-icon icon-blue">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+          </div>
           <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #fff;">6. Business Automation</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
             Reduce manual work and improve business efficiency through automation.
@@ -192,7 +204,7 @@
             <li>Digital Forms & Business Processes</li>
           </ul>
         </div>
-        <a href="{% url 'website:contact' %}" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center; border-color: #3b82f6; color: #fff;">
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Automate Your Business →
         </a>
       </div>
@@ -202,123 +214,139 @@
 </section>
 
 
-<!-- SECTION 2: 🎓 Training & Career Services -->
+<!-- SECTION 2: Training & Career Services -->
 <section id="training-services" class="section" style="padding: 60px 0; background: rgba(0,0,0,0.2);">
   <div class="container">
     <div class="section-header" style="text-align: left; margin-bottom: 40px;">
       <div class="badge-tag" style="background: rgba(245, 158, 11, 0.1); border-color: var(--accent-amber); color: var(--accent-amber);">
         <span>DIVISION 02</span>
       </div>
-      <h2 style="font-size: 2.4rem; margin-top: 10px;">🎓 Training & Career Services</h2>
+      <h2 style="font-size: 2.4rem; margin-top: 10px;">Training & Career Services</h2>
       <p style="color: var(--text-muted); font-size: 1.05rem;">Industry-aligned learning programs built to transform students and job seekers into industry-ready engineers.</p>
     </div>
 
     <div class="grid grid-2">
       
       <!-- 7. Placement Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
-          <div class="card-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); font-size: 2rem; width: 60px; height: 60px; margin: 0;">🎯</div>
-          <div>
-            <h3 style="font-size: 1.5rem; color: #fff;">7. Placement Training</h3>
-            <span style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 600;">100% Career & Interview Preparation</span>
+      <div class="glass-panel-3d" data-tilt style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+            <div class="card-icon icon-amber" style="margin: 0;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.5rem; color: #fff;">7. Placement Training</h3>
+              <span style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 600;">100% Career & Interview Preparation</span>
+            </div>
+          </div>
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            We help students and job seekers prepare for today's competitive technology industry through end-to-end guidance.
+          </p>
+          <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">Training areas include:</strong>
+          <div class="grid grid-2" style="gap: 8px; margin: 12px 0 24px;">
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Programming Core</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Full Stack Development</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Web & Software Dev</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Database Technologies</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Aptitude & Reasoning</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Communication Skills</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Resume Building</div>
+            <div style="font-size: 0.88rem; color: var(--text-main);">✓ Mock Technical Interviews</div>
           </div>
         </div>
-        <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-          We help students and job seekers prepare for today's competitive technology industry through end-to-end guidance.
-        </p>
-        <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">Training areas include:</strong>
-        <div class="grid grid-2" style="gap: 8px; margin: 12px 0 24px;">
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Programming Core</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Full Stack Development</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Web & Software Dev</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Database Technologies</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Aptitude & Reasoning</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Communication Skills</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Resume Building</div>
-          <div style="font-size: 0.88rem; color: var(--text-main);">✓ Mock Technical Interviews</div>
-        </div>
-        <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d">
+        <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Explore Placement Training →
         </a>
       </div>
 
       <!-- 8. Technical Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
-          <div class="card-icon" style="background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan); font-size: 2rem; width: 60px; height: 60px; margin: 0;">💻</div>
-          <div>
-            <h3 style="font-size: 1.5rem; color: #fff;">8. Technical Training</h3>
-            <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600;">Learn → Practice → Build → Prepare</span>
+      <div class="glass-panel-3d" data-tilt style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+            <div class="card-icon" style="margin: 0;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.5rem; color: #fff;">8. Technical Training</h3>
+              <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600;">Learn → Practice → Build → Prepare</span>
+            </div>
+          </div>
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            Learn practical technology skills through structured, hands-on, and project-based training modules.
+          </p>
+          <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">Training programs include:</strong>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 24px;">
+            <span class="tech-pill-mini"><img src="{% static 'website/images/tech/python.svg' %}" alt="Python" style="width:14px;"> Python</span>
+            <span class="tech-pill-mini"><img src="{% static 'website/images/tech/java.svg' %}" alt="Java" style="width:14px;"> Java</span>
+            <span class="tech-pill-mini"><img src="{% static 'website/images/tech/cpp.svg' %}" alt="C++" style="width:14px;"> C++</span>
+            <span class="tech-pill-mini"><img src="{% static 'website/images/tech/react.svg' %}" alt="React" style="width:14px;"> React</span>
+            <span class="tech-pill-mini"><img src="{% static 'website/images/tech/django.svg' %}" alt="Django" style="width:14px;"> Django</span>
+            <span class="tech-pill-mini"><img src="{% static 'website/images/tech/nodejs.svg' %}" alt="SQL" style="width:14px;"> SQL & Databases</span>
+            <span class="tech-pill-mini">Data Structures & Algorithms</span>
+            <span class="tech-pill-mini">Cloud & Deployment</span>
           </div>
         </div>
-        <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-          Learn practical technology skills through structured, hands-on, and project-based training modules.
-        </p>
-        <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">Training programs include:</strong>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 24px;">
-          <span class="tech-pill-mini"><img src="{% static 'website/images/tech/python.svg' %}" alt="Python" style="width:14px;"> Python</span>
-          <span class="tech-pill-mini"><img src="{% static 'website/images/tech/java.svg' %}" alt="Java" style="width:14px;"> Java</span>
-          <span class="tech-pill-mini"><img src="{% static 'website/images/tech/cpp.svg' %}" alt="C++" style="width:14px;"> C++</span>
-          <span class="tech-pill-mini"><img src="{% static 'website/images/tech/react.svg' %}" alt="React" style="width:14px;"> React</span>
-          <span class="tech-pill-mini"><img src="{% static 'website/images/tech/django.svg' %}" alt="Django" style="width:14px;"> Django</span>
-          <span class="tech-pill-mini"><img src="{% static 'website/images/tech/nodejs.svg' %}" alt="SQL" style="width:14px;"> SQL & Databases</span>
-          <span class="tech-pill-mini">Data Structures & Algorithms</span>
-          <span class="tech-pill-mini">Cloud & Deployment</span>
-        </div>
-        <a href="{% url 'website:courses' %}" class="btn btn-secondary" style="border-color: var(--accent-cyan); color: #fff;">
+        <a href="{% url 'website:courses' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           View Training Programs →
         </a>
       </div>
 
       <!-- 9. College & Institutional Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
-          <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); font-size: 2rem; width: 60px; height: 60px; margin: 0;">🏛️</div>
-          <div>
-            <h3 style="font-size: 1.5rem; color: #fff;">9. College & Institutional Training</h3>
-            <span style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 600;">Academic & Campus Collaboration</span>
+      <div class="glass-panel-3d" data-tilt style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+            <div class="card-icon icon-emerald" style="margin: 0;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.5rem; color: #fff;">9. College & Institutional Training</h3>
+              <span style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 600;">Academic & Campus Collaboration</span>
+            </div>
           </div>
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            We collaborate with colleges and educational institutions to provide industry-oriented learning programs.
+          </p>
+          <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">We provide:</strong>
+          <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
+            <li>Technical Workshops & Bootcamps</li>
+            <li>Campus Placement Training</li>
+            <li>Value-Added Accredited Courses</li>
+            <li>Project Training & Guidance</li>
+            <li>Internship Programs for Students</li>
+            <li>Industry Expert Sessions & Hackathons</li>
+          </ul>
         </div>
-        <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-          We collaborate with colleges and educational institutions to provide industry-oriented learning programs.
-        </p>
-        <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">We provide:</strong>
-        <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
-          <li>Technical Workshops & Bootcamps</li>
-          <li>Campus Placement Training</li>
-          <li>Value-Added Accredited Courses</li>
-          <li>Project Training & Guidance</li>
-          <li>Internship Programs for Students</li>
-          <li>Industry Expert Sessions & Hackathons</li>
-        </ul>
-        <a href="{% url 'website:contact' %}" class="btn btn-secondary" style="border-color: var(--accent-emerald); color: #fff;">
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Partner With Us →
         </a>
       </div>
 
       <!-- 10. Internship & Project Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
-          <div class="card-icon" style="background: rgba(236, 72, 153, 0.15); color: #ec4899; font-size: 2rem; width: 60px; height: 60px; margin: 0;">🚀</div>
-          <div>
-            <h3 style="font-size: 1.5rem; color: #fff;">10. Internship & Project Training</h3>
-            <span style="font-size: 0.85rem; color: #ec4899; font-weight: 600;">Real-World Exposure & Certificate</span>
+      <div class="glass-panel-3d" data-tilt style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+            <div class="card-icon icon-pink" style="margin: 0;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.5rem; color: #fff;">10. Internship & Project Training</h3>
+              <span style="font-size: 0.85rem; color: #ec4899; font-weight: 600;">Real-World Exposure & Certificate</span>
+            </div>
           </div>
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            Get practical exposure by working on real-world technology projects with active software engineers.
+          </p>
+          <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">Our project training includes:</strong>
+          <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
+            <li>Mini & Major Projects</li>
+            <li>Full Stack Web Applications</li>
+            <li>Software & Database Systems</li>
+            <li>Complete Project Documentation</li>
+            <li>Project Presentation Support</li>
+            <li>Verified Internship Experience Letter</li>
+          </ul>
         </div>
-        <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-          Get practical exposure by working on real-world technology projects with active software engineers.
-        </p>
-        <strong style="font-size: 0.88rem; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">Our project training includes:</strong>
-        <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
-          <li>Mini & Major Projects</li>
-          <li>Full Stack Web Applications</li>
-          <li>Software & Database Systems</li>
-          <li>Complete Project Documentation</li>
-          <li>Project Presentation Support</li>
-          <li>Verified Internship Experience Letter</li>
-        </ul>
-        <a href="{% url 'website:training' %}" class="btn btn-secondary" style="border-color: #ec4899; color: #fff;">
+        <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Explore Internship Programs →
         </a>
       </div>
@@ -328,55 +356,59 @@
 </section>
 
 
-<!-- SECTION 3: 🤝 IT Consulting & Support -->
+<!-- SECTION 3: IT Consulting & Support -->
 <section id="consulting-services" class="section" style="padding: 60px 0;">
   <div class="container">
     <div class="section-header" style="text-align: left; margin-bottom: 40px;">
       <div class="badge-tag" style="background: rgba(16, 185, 129, 0.1); border-color: var(--accent-emerald); color: var(--accent-emerald);">
         <span>DIVISION 03</span>
       </div>
-      <h2 style="font-size: 2.4rem; margin-top: 10px;">🤝 IT Consulting & Support</h2>
+      <h2 style="font-size: 2.4rem; margin-top: 10px;">IT Consulting & Support</h2>
       <p style="color: var(--text-muted); font-size: 1.05rem;">Expert advice and continuous support to ensure your technology stack runs without hiccups.</p>
     </div>
 
     <div class="grid grid-2">
       
       <!-- 11. IT Consulting -->
-      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 12px;">11. IT Consulting</h3>
-        <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-          Not sure what technology your business needs? We help you understand your requirements and identify suitable, cost-effective technology solutions.
-        </p>
-        <strong style="font-size: 0.88rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.5px;">Consulting areas include:</strong>
-        <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
-          <li>Technology Planning & Roadmap</li>
-          <li>Website & Application Architecture</li>
-          <li>Software Architecture Design</li>
-          <li>Digital Transformation Strategy</li>
-          <li>Database Planning & Scaling</li>
-          <li>Business Process Automation Selection</li>
-        </ul>
-        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d">
+      <div class="glass-panel-3d" data-tilt style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 12px;">11. IT Consulting</h3>
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            Not sure what technology your business needs? We help you understand your requirements and identify suitable, cost-effective technology solutions.
+          </p>
+          <strong style="font-size: 0.88rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.5px;">Consulting areas include:</strong>
+          <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
+            <li>Technology Planning & Roadmap</li>
+            <li>Website & Application Architecture</li>
+            <li>Software Architecture Design</li>
+            <li>Digital Transformation Strategy</li>
+            <li>Database Planning & Scaling</li>
+            <li>Business Process Automation Selection</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Schedule IT Consultation →
         </a>
       </div>
 
       <!-- 12. Website & Application Maintenance -->
-      <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 12px;">12. Website & Application Maintenance</h3>
-        <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-          Already have an existing website or application? We can help maintain, improve, secure, and update your digital systems.
-        </p>
-        <strong style="font-size: 0.88rem; color: var(--accent-amber); text-transform: uppercase; letter-spacing: 0.5px;">Support includes:</strong>
-        <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
-          <li>Bug Fixing & Patching</li>
-          <li>Performance & Speed Improvements</li>
-          <li>Feature Updates & Modifications</li>
-          <li>Security Audits & Patching</li>
-          <li>Database Backup & Support</li>
-          <li>24/7 Technical Assistance & Content Updates</li>
-        </ul>
-        <a href="{% url 'website:contact' %}" class="btn btn-secondary" style="border-color: var(--accent-amber); color: #fff;">
+      <div class="glass-panel-3d" data-tilt style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 12px;">12. Website & Application Maintenance</h3>
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            Already have an existing website or application? We can help maintain, improve, secure, and update your digital systems.
+          </p>
+          <strong style="font-size: 0.88rem; color: var(--accent-amber); text-transform: uppercase; letter-spacing: 0.5px;">Support includes:</strong>
+          <ul class="checklist-grid" style="margin: 12px 0 24px; font-size: 0.88rem;">
+            <li>Bug Fixing & Patching</li>
+            <li>Performance & Speed Improvements</li>
+            <li>Feature Updates & Modifications</li>
+            <li>Security Audits & Patching</li>
+            <li>Database Backup & Support</li>
+            <li>24/7 Technical Assistance & Content Updates</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">
           Get Maintenance Support →
         </a>
       </div>
@@ -386,7 +418,7 @@
 </section>
 
 
-<!-- SECTION 4: 🚀 Our Service Process -->
+<!-- SECTION 4: Our Service Process -->
 <section id="service-process" class="section" style="padding: 80px 0; background: rgba(0,0,0,0.3);">
   <div class="container">
     <div class="section-header">
@@ -394,7 +426,7 @@
         <span class="pulse-dot"></span>
         <span>METHODOLOGY THAT DELIVERS RESULTS</span>
       </div>
-      <h2 style="font-size: 2.5rem;">🚀 Our Service Process</h2>
+      <h2 style="font-size: 2.5rem;">Our Service Process</h2>
       <p style="color: var(--text-muted); max-width: 700px; margin: 10px auto 0;">From initial consultation to deployment and ongoing support, we follow a transparent 6-step lifecycle.</p>
     </div>
 
@@ -452,37 +484,49 @@
     <div class="grid grid-3" style="margin-top: 40px;">
       
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 12px;">🎯</div>
+        <div class="card-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Industry Focused</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Solutions and training designed around real-world practical requirements rather than static theory.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 12px;">💻</div>
+        <div class="card-icon icon-violet">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Practical Approach</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">We focus on hands-on implementation, project building, live coding, and active deployment.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 12px;">🧩</div>
+        <div class="card-icon icon-amber">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Customized Solutions</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Every project and training syllabus can be tailored to match your precise organizational needs.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 12px;">⚡</div>
+        <div class="card-icon icon-blue">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Technology Driven</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">We leverage modern frameworks, cloud architectures, and industry-standard development practices.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 12px;">📈</div>
+        <div class="card-icon icon-emerald">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Career & Business Focused</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Our services are designed to create measurable, tangible value for learners and growing businesses.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 12px;">🤝</div>
+        <div class="card-icon icon-pink">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Long-Term Partnership</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">We build lasting relationships with clients, students, and institutional partners for ongoing success.</p>
       </div>

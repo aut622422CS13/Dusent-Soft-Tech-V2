@@ -6,7 +6,7 @@
 {% block content %}
 
 <!-- 1. Hero Section -->
-<section class="hero">
+<section id="hero" class="hero">
   <div class="hero-glow"></div>
   <div class="container">
     <div class="hero-grid">
@@ -50,7 +50,7 @@
 
         <div class="mascot-avatar-card glass-panel-3d" data-tilt>
           <div class="mascot-speech-bubble" id="mascot-speech-bubble">
-            Empowering Careers & Building Digital Solutions! 🚀
+            Empowering Careers & Building Digital Solutions!
           </div>
 
           <div class="mascot-svg-wrapper">
@@ -160,8 +160,10 @@
     <div class="responsive-grid-2col">
       <!-- Section 3.i: Placement Training -->
       <div class="glass-panel-3d" data-tilt style="padding: 36px;">
-        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
-          <span style="font-size: 2.2rem;">🎓</span>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <div class="card-icon" style="margin: 0;">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          </div>
           <div>
             <h3 style="font-size: 1.6rem;" class="gradient-text">Placement Training</h3>
             <span style="font-size: 0.85rem; color: var(--accent-cyan);">Career Development Track</span>
@@ -188,44 +190,46 @@
           </li>
         </ul>
         <div style="margin-top: 28px;">
-          <a href="{% url 'website:training' %}" class="btn btn-outline" style="width: 100%;">Explore Placement Training →</a>
+          <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">Explore Placement Training →</a>
         </div>
       </div>
 
       <!-- Section 3.ii: IT Solutions -->
       <div class="glass-panel-3d" data-tilt style="padding: 36px;">
-        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
-          <span style="font-size: 2.2rem;">💻</span>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <div class="card-icon" style="background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.35); margin: 0;">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
           <div>
-            <h3 style="font-size: 1.6rem;" class="gold-gradient-text">IT Solutions</h3>
-            <span style="font-size: 0.85rem; color: var(--accent-amber);">Enterprise Software Division</span>
+            <h3 style="font-size: 1.6rem;" class="gradient-text">IT Solutions</h3>
+            <span style="font-size: 0.85rem; color: var(--accent-cyan);">Enterprise Software Division</span>
           </div>
         </div>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Website Development (Responsive & Modern)
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Website Development (Responsive & Modern)
           </li>
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Custom Web Applications (SaaS & Cloud)
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Custom Web Applications (SaaS & Cloud)
           </li>
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Mobile Applications (iOS & Android)
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Mobile Applications (iOS & Android)
           </li>
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Bespoke Software Development
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Bespoke Software Development
           </li>
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> UI/UX Design & User Experience
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> UI/UX Design & User Experience
           </li>
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Database & Backend Solutions
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Database & Backend Solutions
           </li>
           <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;">
-            <span style="color: var(--accent-amber); font-weight: 800;">✓</span> Business Automation & Workflows
+            <span style="color: var(--accent-emerald); font-weight: 800;">✓</span> Business Automation & Workflows
           </li>
         </ul>
         <div style="margin-top: 28px;">
-          <a href="{% url 'website:software_dev' %}" class="btn btn-outline" style="width: 100%;">Explore IT Solutions →</a>
+          <a href="{% url 'website:software_dev' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center; justify-content: center;">Explore IT Solutions →</a>
         </div>
       </div>
     </div>
@@ -242,37 +246,49 @@
 
     <div class="responsive-card-grid">
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-cyan);">📚</div>
+        <div class="card-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Industry-Oriented Learning</h3>
         <p style="font-size: 0.9rem;">Curriculum aligned with current industry standards and recruiter demands.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-violet);">🛠️</div>
+        <div class="card-icon icon-violet">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Practical Project Experience</h3>
         <p style="font-size: 0.9rem;">Hands-on coding on real client projects to build robust portfolio proof.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-amber);">👨‍💻</div>
+        <div class="card-icon icon-amber">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Skilled Trainers & Developers</h3>
         <p style="font-size: 0.9rem;">Mentorship by seasoned software engineers and industry practitioners.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-emerald);">⚙️</div>
+        <div class="card-icon icon-emerald">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Customized Solutions</h3>
         <p style="font-size: 0.9rem;">Tailored IT solutions and learning roadmaps built around specific goals.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-pink);">🎯</div>
+        <div class="card-icon icon-pink">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Career-Focused Approach</h3>
         <p style="font-size: 0.9rem;">Clear focus on employability, job placement, and career advancement.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px;">
-        <div style="font-size: 2rem; margin-bottom: 14px; color: var(--accent-cyan);">🤝</div>
+        <div class="card-icon icon-blue">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
         <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Continuous Support</h3>
         <p style="font-size: 0.9rem;">24/7 mentor assistance, code reviews, and post-placement guidance.</p>
       </div>
@@ -339,7 +355,12 @@
 
     <div class="responsive-card-grid">
       <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
-        <span style="font-size: 2.4rem;">🎓</span>
+        <div class="card-icon" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.35); color: var(--accent-cyan); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
         <div>
           <h4 style="font-size: 1.2rem; color: #fff;">Students</h4>
           <p style="font-size: 0.85rem;">College students seeking practical coding skills.</p>
@@ -347,7 +368,12 @@
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
-        <span style="font-size: 2.4rem;">👨‍💻</span>
+        <div class="card-icon" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.35); color: var(--accent-amber); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
         <div>
           <h4 style="font-size: 1.2rem; color: #fff;">Job Seekers</h4>
           <p style="font-size: 0.85rem;">Graduates aiming for high-paying tech jobs.</p>
@@ -355,7 +381,16 @@
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
-        <span style="font-size: 2.4rem;">🏫</span>
+        <div class="card-icon" style="background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.35); color: var(--accent-violet); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18"></path>
+            <path d="M5 21V7l7-4 7 4v14"></path>
+            <path d="M9 10h1"></path>
+            <path d="M9 14h1"></path>
+            <path d="M14 10h1"></path>
+            <path d="M14 14h1"></path>
+          </svg>
+        </div>
         <div>
           <h4 style="font-size: 1.2rem; color: #fff;">Colleges & Institutions</h4>
           <p style="font-size: 0.85rem;">Academic partners for placement training drives.</p>
@@ -363,7 +398,11 @@
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
-        <span style="font-size: 2.4rem;">🏢</span>
+        <div class="card-icon" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35); color: var(--accent-emerald); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
         <div>
           <h4 style="font-size: 1.2rem; color: #fff;">Startups</h4>
           <p style="font-size: 0.85rem;">Emerging companies needing MVP development.</p>
@@ -371,7 +410,17 @@
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
-        <span style="font-size: 2.4rem;">🏭</span>
+        <div class="card-icon" style="background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.35); color: var(--accent-pink); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <line x1="9" y1="22" x2="9" y2="22.01"></line>
+            <line x1="15" y1="22" x2="15" y2="22.01"></line>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="8" y1="10" x2="16" y2="10"></line>
+            <line x1="8" y1="14" x2="16" y2="14"></line>
+            <line x1="8" y1="18" x2="16" y2="18"></line>
+          </svg>
+        </div>
         <div>
           <h4 style="font-size: 1.2rem; color: #fff;">Businesses</h4>
           <p style="font-size: 0.85rem;">SMBs seeking digital transformation.</p>
@@ -379,7 +428,14 @@
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 28px; display: flex; align-items: center; gap: 18px;">
-        <span style="font-size: 2.4rem;">🤝</span>
+        <div class="card-icon" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.35); color: var(--accent-cyan); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
         <div>
           <h4 style="font-size: 1.2rem; color: #fff;">Corporate Clients</h4>
           <p style="font-size: 0.85rem;">Enterprise clients needing IT outsourcing.</p>
@@ -399,25 +455,33 @@
 
     <div class="responsive-card-grid">
       <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-cyan);">🌐</div>
+        <div class="card-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+        </div>
         <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Web Development</h3>
         <p style="font-size: 0.9rem; line-height: 1.6;">Modern, responsive websites for businesses built with scalable web architecture.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-amber);">🎓</div>
+        <div class="card-icon icon-amber">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
         <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Placement Training</h3>
         <p style="font-size: 0.9rem; line-height: 1.6;">Industry-focused training designed to improve employability and secure software offers.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-violet);">🛠️</div>
+        <div class="card-icon icon-violet">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
         <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Software Development</h3>
         <p style="font-size: 0.9rem; line-height: 1.6;">Customized software solutions tailored specifically for growing business needs.</p>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 32px;">
-        <div style="font-size: 2.2rem; margin-bottom: 16px; color: var(--accent-emerald);">💡</div>
+        <div class="card-icon icon-emerald">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
         <h3 style="font-size: 1.35rem; margin-bottom: 10px;">IT Consulting</h3>
         <p style="font-size: 0.9rem; line-height: 1.6;">Strategic technology guidance for organizations, institutions, and tech startups.</p>
       </div>
@@ -438,28 +502,38 @@
 
     <div class="responsive-card-grid-sm">
       <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
-        <span style="font-size: 1.8rem;">🏢</span>
-        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-cyan);">TechCorp Global</h4>
+        <div class="card-icon" style="margin: 0 auto 8px; width: 44px; height: 44px;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h4 style="font-size: 0.95rem; margin-top: 4px; color: var(--accent-cyan);">TechCorp Global</h4>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
-        <span style="font-size: 1.8rem;">🏫</span>
-        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-violet);">City Tech University</h4>
+        <div class="card-icon icon-violet" style="margin: 0 auto 8px; width: 44px; height: 44px;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
+        <h4 style="font-size: 0.95rem; margin-top: 4px; color: var(--accent-violet);">City Tech University</h4>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
-        <span style="font-size: 1.8rem;">🚀</span>
-        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-amber);">CloudScale Labs</h4>
+        <div class="card-icon icon-amber" style="margin: 0 auto 8px; width: 44px; height: 44px;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h4 style="font-size: 0.95rem; margin-top: 4px; color: var(--accent-amber);">CloudScale Labs</h4>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
-        <span style="font-size: 1.8rem;">⚙️</span>
-        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-emerald);">DevNexus Systems</h4>
+        <div class="card-icon icon-emerald" style="margin: 0 auto 8px; width: 44px; height: 44px;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <h4 style="font-size: 0.95rem; margin-top: 4px; color: var(--accent-emerald);">DevNexus Systems</h4>
       </div>
 
       <div class="glass-panel-3d" data-tilt style="padding: 24px; text-align: center;">
-        <span style="font-size: 1.8rem;">🎓</span>
-        <h4 style="font-size: 0.95rem; margin-top: 8px; color: var(--accent-pink);">Apex Engineering College</h4>
+        <div class="card-icon icon-pink" style="margin: 0 auto 8px; width: 44px; height: 44px;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h4 style="font-size: 0.95rem; margin-top: 4px; color: var(--accent-pink);">Apex Engineering College</h4>
       </div>
     </div>
   </div>

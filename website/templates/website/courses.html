@@ -15,7 +15,7 @@
         <span>OUR SERVICES • TRAINING & CAREER PROGRAMS</span>
       </div>
       <h1 class="hero-title" style="font-size: 3.2rem;">
-        🎓 Training & <span class="gradient-text">Career Services</span>
+        Training & <span class="gradient-text">Career Services</span>
       </h1>
       <p style="font-size: 1.15rem; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-main);">
         We help students and job seekers prepare for today's technology industry through structured, practical, and project-based learning programs.
@@ -30,92 +30,126 @@
     <div class="responsive-card-grid" style="margin-bottom: 60px;">
       
       <!-- 7. Placement Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
-        <div style="font-size: 2.4rem; margin-bottom: 12px;">🎓</div>
-        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">7. Placement Training</h3>
-        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
-          We help students and job seekers prepare for today's technology industry.
-        </p>
-        <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 10px;">Training areas include:</div>
-        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
-          <li>✓ Programming</li>
-          <li>✓ Full Stack Dev</li>
-          <li>✓ Web Development</li>
-          <li>✓ Software Engineering</li>
-          <li>✓ Database Stacks</li>
-          <li>✓ Aptitude & Reasoning</li>
-          <li>✓ Soft Skills</li>
-          <li>✓ Interview Preparation</li>
-          <li>✓ Resume Building</li>
-          <li>✓ Mock Interviews</li>
-        </ul>
-        <a href="{% url 'website:training' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Explore Placement Training →</a>
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-icon" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.35); color: var(--accent-cyan); margin-bottom: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">7. Placement Training</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+            We help students and job seekers prepare for today's technology industry.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 10px;">Training areas include:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Programming</li>
+            <li>✓ Full Stack Dev</li>
+            <li>✓ Web Development</li>
+            <li>✓ Software Engineering</li>
+            <li>✓ Database Stacks</li>
+            <li>✓ Aptitude & Reasoning</li>
+            <li>✓ Soft Skills</li>
+            <li>✓ Interview Preparation</li>
+            <li>✓ Resume Building</li>
+            <li>✓ Mock Interviews</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center;">Explore Placement Training →</a>
       </div>
 
       <!-- 8. Technical Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
-        <div style="font-size: 2.4rem; margin-bottom: 12px;">💻</div>
-        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gold-gradient-text">8. Technical Training</h3>
-        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
-          Learn practical technology skills through structured and project-based training.
-        </p>
-        <div style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; margin-bottom: 10px;">Training programs include:</div>
-        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-          <li>✓ Python 3.13</li>
-          <li>✓ Java 21</li>
-          <li>✓ Full Stack Dev</li>
-          <li>✓ React.js</li>
-          <li>✓ Django 5</li>
-          <li>✓ SQL Databases</li>
-          <li>✓ Data Structures & DSA</li>
-          <li>✓ Cloud Basics</li>
-        </ul>
-        <div style="padding: 10px; background: rgba(245, 158, 11, 0.1); border: 1px dashed var(--accent-amber); border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--accent-amber); text-align: center; margin-bottom: 20px;">
-          Approach: Learn → Practice → Build → Prepare
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-icon" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.35); color: var(--accent-amber); margin-bottom: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gold-gradient-text">8. Technical Training</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+            Learn practical technology skills through structured and project-based training.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; margin-bottom: 10px;">Training programs include:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+            <li>✓ Python 3.13</li>
+            <li>✓ Java 21</li>
+            <li>✓ Full Stack Dev</li>
+            <li>✓ React.js</li>
+            <li>✓ Django 5</li>
+            <li>✓ SQL Databases</li>
+            <li>✓ Data Structures & DSA</li>
+            <li>✓ Cloud Basics</li>
+          </ul>
+          <div style="padding: 10px; background: rgba(245, 158, 11, 0.1); border: 1px dashed var(--accent-amber); border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--accent-amber); text-align: center; margin-bottom: 20px;">
+            Approach: Learn → Practice → Build → Prepare
+          </div>
         </div>
-        <a href="#courses-grid" class="btn btn-outline btn-glow-3d" style="width: 100%;">View Training Programs →</a>
+        <a href="#courses-grid" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center;">View Training Programs →</a>
       </div>
 
       <!-- 9. College & Institutional Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
-        <div style="font-size: 2.4rem; margin-bottom: 12px;">🏫</div>
-        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">9. College & Institutional Training</h3>
-        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
-          We collaborate with colleges and educational institutions to provide industry-oriented learning programs.
-        </p>
-        <div style="font-size: 0.85rem; color: var(--accent-violet); font-weight: 700; margin-bottom: 10px;">We provide:</div>
-        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
-          <li>✓ Technical Workshops</li>
-          <li>✓ Placement Training</li>
-          <li>✓ Value-Added Courses</li>
-          <li>✓ Project Training</li>
-          <li>✓ Internship Programs</li>
-          <li>✓ Skill Development</li>
-          <li>✓ Industry Sessions</li>
-          <li>✓ Hackathons & Events</li>
-        </ul>
-        <a href="{% url 'website:contact' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Partner With Us →</a>
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-icon" style="background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.35); color: var(--accent-violet); margin-bottom: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l7-4 7 4v14"></path>
+              <path d="M9 10h1"></path>
+              <path d="M9 14h1"></path>
+              <path d="M14 10h1"></path>
+              <path d="M14 14h1"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">9. College & Institutional Training</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+            We collaborate with colleges and educational institutions to provide industry-oriented learning programs.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-violet); font-weight: 700; margin-bottom: 10px;">We provide:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Technical Workshops</li>
+            <li>✓ Placement Training</li>
+            <li>✓ Value-Added Courses</li>
+            <li>✓ Project Training</li>
+            <li>✓ Internship Programs</li>
+            <li>✓ Skill Development</li>
+            <li>✓ Industry Sessions</li>
+            <li>✓ Hackathons & Events</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:contact' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center;">Partner With Us →</a>
       </div>
 
       <!-- 10. Internship & Project Training -->
-      <div class="glass-panel-3d" data-tilt style="padding: 36px;">
-        <div style="font-size: 2.4rem; margin-bottom: 12px;">🧪</div>
-        <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">10. Internship & Project Training</h3>
-        <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
-          Get practical exposure by working on real-world technology projects.
-        </p>
-        <div style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 700; margin-bottom: 10px;">Our project training includes:</div>
-        <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
-          <li>✓ Mini Projects</li>
-          <li>✓ Major Projects</li>
-          <li>✓ Full Stack Projects</li>
-          <li>✓ Web Applications</li>
-          <li>✓ Software Projects</li>
-          <li>✓ Database Projects</li>
-          <li>✓ Documentation Support</li>
-          <li>✓ Presentation Support</li>
-        </ul>
-        <a href="{% url 'website:training' %}" class="btn btn-outline btn-glow-3d" style="width: 100%;">Explore Internship Programs →</a>
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-icon" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35); color: var(--accent-emerald); margin-bottom: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 2v7.31L4.36 20.14A2 2 0 0 0 6.1 23h11.8a2 2 0 0 0 1.74-2.86L14 9.31V2"></path>
+              <path d="M8.5 2h7"></path>
+              <path d="M7 16h10"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;" class="gradient-text">10. Internship & Project Training</h3>
+          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+            Get practical exposure by working on real-world technology projects.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 700; margin-bottom: 10px;">Our project training includes:</div>
+          <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+            <li>✓ Mini Projects</li>
+            <li>✓ Major Projects</li>
+            <li>✓ Full Stack Projects</li>
+            <li>✓ Web Applications</li>
+            <li>✓ Software Projects</li>
+            <li>✓ Database Projects</li>
+            <li>✓ Documentation Support</li>
+            <li>✓ Presentation Support</li>
+          </ul>
+        </div>
+        <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center;">Explore Internship Programs →</a>
       </div>
 
     </div>
@@ -155,12 +189,12 @@
           <h3 class="course-title">{{ course.title }}</h3>
           
           <div class="validity-pill">
-            <span>⏱️ Validity:</span> {{ course.validity_period }}
+            <span>Validity:</span> {{ course.validity_period }}
           </div>
 
           <div class="course-meta">
-            <span>⏱️ {{ course.duration }}</span>
-            <span>🎯 {{ course.skill_level }}</span>
+            <span>{{ course.duration }}</span>
+            <span>{{ course.skill_level }}</span>
           </div>
 
           <p style="font-size: 0.9rem; margin-bottom: 16px;">{{ course.short_description }}</p>
@@ -185,14 +219,14 @@
 
 <!-- Course Modal Popup -->
 <div id="course-modal" class="course-modal-backdrop">
-  <div class="course-modal-dialog glass-panel-3d">
+  <div class="course-modal-dialog glass-panel">
     <button id="close-course-modal" class="close-modal-btn">✕</button>
     <span id="modal-course-category" class="course-lang-tag" style="margin-bottom: 12px; font-size: 0.85rem;">Python & AI</span>
     <h2 id="modal-course-title" style="font-size: 2rem; margin-bottom: 14px;" class="gradient-text">Course Title</h2>
     
     <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
       <div class="validity-pill" style="font-size: 0.85rem; padding: 6px 16px;">
-        <span>🎓 Validity & Access:</span> <span id="modal-course-validity">Lifetime Access + 2 Yrs Support</span>
+        <span>Validity & Access:</span> <span id="modal-course-validity">Lifetime Access + 2 Yrs Support</span>
       </div>
     </div>
 

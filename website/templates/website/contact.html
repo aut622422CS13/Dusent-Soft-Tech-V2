@@ -38,7 +38,11 @@
           <h3 style="margin-bottom: 20px; font-size: 1.5rem;" class="gradient-text">Get In Touch</h3>
           
           <div class="info-item" style="margin-bottom: 24px;">
-            <div class="info-icon">📞</div>
+            <div class="info-icon" style="color: var(--accent-cyan); display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
             <div>
               <h4 style="font-size: 1.05rem; color: #fff;">Phone</h4>
               <p style="font-size: 0.95rem; font-weight: 700; color: var(--accent-cyan);">+91 88256 45950</p>
@@ -47,7 +51,12 @@
           </div>
 
           <div class="info-item" style="margin-bottom: 24px;">
-            <div class="info-icon">📧</div>
+            <div class="info-icon" style="color: var(--accent-amber); display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
             <div>
               <h4 style="font-size: 1.05rem; color: #fff;">Email</h4>
               <p style="font-size: 0.95rem; font-weight: 700; color: var(--accent-amber);">
@@ -58,12 +67,17 @@
           </div>
 
           <div class="info-item" style="margin-bottom: 24px;">
-            <div class="info-icon">📍</div>
+            <div class="info-icon" style="color: var(--accent-emerald); display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
             <div>
               <h4 style="font-size: 1.05rem; color: #fff;">Our Location</h4>
               <p style="font-size: 0.95rem; font-weight: 700; color: var(--accent-emerald);">
                 <a href="https://maps.app.goo.gl/UYHAP8jDsYQpA1uE7?g_st=ac" target="_blank" style="color: var(--accent-emerald); text-decoration: underline;">
-                  View on Google Maps 📍
+                  View on Google Maps ↗
                 </a>
               </p>
               <p style="font-size: 0.85rem; color: var(--text-muted);">Tamil Nadu, India</p>
@@ -71,7 +85,11 @@
           </div>
 
           <div class="info-item">
-            <div class="info-icon" style="background: rgba(37, 211, 102, 0.15); border-color: #25D366; color: #25D366;">💬</div>
+            <div class="info-icon" style="background: rgba(37, 211, 102, 0.15); border-color: #25D366; color: #25D366; display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
             <div>
               <h4 style="font-size: 1.05rem; color: #fff;">WhatsApp</h4>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Have a quick question? Chat with us on WhatsApp</p>
@@ -94,33 +112,91 @@
           </div>
         {% endif %}
 
-        <form id="inquiry-form" method="POST" action="{% url 'website:contact' %}">
+        {% if form.errors %}
+          <div class="form-alert-banner" style="padding: 14px 18px; background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; border-radius: 8px; color: #fca5a5; margin-bottom: 20px; font-size: 0.92rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #ef4444; flex-shrink: 0;">
+              <circle cx="12" cy="12" r="10" stroke-width="2"/>
+              <line x1="12" y1="8" x2="12" y2="12" stroke-width="2" stroke-linecap="round"/>
+              <line x1="12" y1="16" x2="12.01" y2="16" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Please correct the highlighted fields below.</span>
+          </div>
+        {% endif %}
+
+        <form id="inquiry-form" method="POST" action="{% url 'website:contact' %}" novalidate>
           {% csrf_token %}
 
-          <div class="form-group">
-            <label class="form-label">Full Name *</label>
+          <div class="form-group {% if form.full_name.errors %}has-error{% endif %}" data-field-group="full_name">
+            <label class="form-label" for="{{ form.full_name.id_for_label }}">Full Name *</label>
             {{ form.full_name }}
+            <div class="field-error-msg" id="error-full_name" {% if form.full_name.errors %}style="display:flex;"{% endif %}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <span class="error-text">{% if form.full_name.errors %}{{ form.full_name.errors.0 }}{% endif %}</span>
+            </div>
           </div>
 
           <div class="responsive-form-row">
-            <div class="form-group">
-              <label class="form-label">Email Address *</label>
+            <div class="form-group {% if form.email.errors %}has-error{% endif %}" data-field-group="email">
+              <label class="form-label" for="{{ form.email.id_for_label }}">Email Address *</label>
               {{ form.email }}
+              <div class="field-error-msg" id="error-email" {% if form.email.errors %}style="display:flex;"{% endif %}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <span class="error-text">{% if form.email.errors %}{{ form.email.errors.0 }}{% endif %}</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Phone Number *</label>
+            <div class="form-group {% if form.phone.errors %}has-error{% endif %}" data-field-group="phone">
+              <label class="form-label" for="{{ form.phone.id_for_label }}">Phone Number *</label>
               {{ form.phone }}
+              <div class="field-error-msg" id="error-phone" {% if form.phone.errors %}style="display:flex;"{% endif %}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <span class="error-text">{% if form.phone.errors %}{{ form.phone.errors.0 }}{% endif %}</span>
+              </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label">I'm Interested In *</label>
+          <div class="form-group {% if form.interested_in.errors %}has-error{% endif %}" data-field-group="interested_in">
+            <label class="form-label" for="{{ form.interested_in.id_for_label }}">I'm Interested In *</label>
             {{ form.interested_in }}
+            <div class="field-error-msg" id="error-interested_in" {% if form.interested_in.errors %}style="display:flex;"{% endif %}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <span class="error-text">{% if form.interested_in.errors %}{{ form.interested_in.errors.0 }}{% endif %}</span>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label">Message *</label>
-            {{ form.message }}
+          <div class="form-group {% if form.message.errors %}has-error{% endif %}" data-field-group="message">
+            <div class="textarea-header">
+              <label class="form-label" for="{{ form.message.id_for_label }}">Message *</label>
+              <button type="button" id="toggle-message-expand" class="textarea-resize-btn" title="Toggle expand/collapse message field" aria-label="Toggle resize message field">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                <span class="resize-btn-text">Expand</span>
+              </button>
+            </div>
+            <div class="textarea-wrapper">
+              {{ form.message }}
+              <div class="textarea-corner-hint" title="Drag to resize vertically" aria-hidden="true">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+                  <line x1="10" y1="2" x2="2" y2="10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <line x1="10" y1="6" x2="6" y2="10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <circle cx="9.5" cy="9.5" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <div class="field-error-msg" id="error-message" {% if form.message.errors %}style="display:flex;"{% endif %}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <span class="error-text">{% if form.message.errors %}{{ form.message.errors.0 }}{% endif %}</span>
+            </div>
           </div>
 
           <button type="submit" class="btn btn-accent btn-glow-3d" style="width: 100%; padding: 16px; margin-top: 10px; font-size: 1rem;">
@@ -139,27 +215,42 @@
     <div class="responsive-grid-2col">
       
       <!-- Looking for Training? Card -->
-      <div class="glass-panel-3d" data-tilt style="padding: 36px; border-color: rgba(0, 242, 254, 0.3);">
-        <div style="font-size: 2.2rem; margin-bottom: 12px;">🎓</div>
-        <h3 style="font-size: 1.5rem; margin-bottom: 6px;" class="gradient-text">Looking for Training?</h3>
-        <h4 style="font-size: 1.05rem; color: var(--accent-cyan); margin-bottom: 12px;">Build Your Skills. Prepare for Your Career.</h4>
-        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;">
-          Get industry-focused training, practical project experience, interview preparation, and career guidance.
-        </p>
-        <a href="{% url 'website:training' %}" class="btn btn-outline btn-glow-3d">
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; border-color: rgba(0, 242, 254, 0.3); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-icon" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.35); color: var(--accent-cyan); margin-bottom: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 6px;" class="gradient-text">Looking for Training?</h3>
+          <h4 style="font-size: 1.05rem; color: var(--accent-cyan); margin-bottom: 12px;">Build Your Skills. Prepare for Your Career.</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;">
+            Get industry-focused training, practical project experience, interview preparation, and career guidance.
+          </p>
+        </div>
+        <a href="{% url 'website:training' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center;">
           Explore Training →
         </a>
       </div>
 
       <!-- Looking for an IT Solution? Card -->
-      <div class="glass-panel-3d" data-tilt style="padding: 36px; border-color: rgba(245, 158, 11, 0.3);">
-        <div style="font-size: 2.2rem; margin-bottom: 12px;">💻</div>
-        <h3 style="font-size: 1.5rem; margin-bottom: 6px;" class="gold-gradient-text">Looking for an IT Solution?</h3>
-        <h4 style="font-size: 1.05rem; color: var(--accent-amber); margin-bottom: 12px;">Have an Idea? Let's Build It.</h4>
-        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;">
-          Tell us about your business requirement, website, application, or software idea. Our team will understand your requirements and help you choose the right technology solution.
-        </p>
-        <a href="{% url 'website:software_dev' %}" class="btn btn-outline btn-glow-3d">
+      <div class="glass-panel-3d" data-tilt style="padding: 36px; border-color: rgba(245, 158, 11, 0.3); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="card-icon" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.35); color: var(--accent-amber); margin-bottom: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 6px;" class="gold-gradient-text">Looking for an IT Solution?</h3>
+          <h4 style="font-size: 1.05rem; color: var(--accent-amber); margin-bottom: 12px;">Have an Idea? Let's Build It.</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;">
+            Tell us about your business requirement, website, application, or software idea. Our team will understand your requirements and help you choose the right technology solution.
+          </p>
+        </div>
+        <a href="{% url 'website:software_dev' %}" class="btn btn-primary btn-glow-3d" style="width: 100%; text-align: center;">
           Discuss Your Project →
         </a>
       </div>
@@ -218,10 +309,10 @@
       </p>
 
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://wa.me/919876543210?text=Hello%20DUSENT%20SOFT%20TECH,%20I%20want%20to%20connect!" target="_blank" class="btn btn-accent btn-glow-3d" style="padding: 14px 28px; background: #25D366;">
+        <a href="https://wa.me/918825645950?text=Hello%20DUSENT%20SOFT%20TECH,%20I%20want%20to%20connect!" target="_blank" class="btn btn-accent btn-glow-3d" style="padding: 14px 28px; background: #25D366;">
           WhatsApp Us
         </a>
-        <a href="tel:+919876543210" class="btn btn-primary btn-glow-3d" style="padding: 14px 28px;">
+        <a href="tel:+918825645950" class="btn btn-primary btn-glow-3d" style="padding: 14px 28px;">
           Call Us
         </a>
         <a href="#inquiry-form" class="btn btn-outline btn-glow-3d" style="padding: 14px 28px;">

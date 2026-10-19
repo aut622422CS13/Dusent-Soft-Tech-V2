@@ -101,11 +101,19 @@ def inquiry_submit_api(request):
             'whatsapp_url': whatsapp_url
         })
     else:
-        errors = [f"{field}: {', '.join(errs)}" for field, errs in form.errors.items()]
+        field_errors = {}
+        error_list = []
+        for field, errs in form.errors.items():
+            field_errors[field] = [str(e) for e in errs]
+            field_label = form.fields[field].label if (field in form.fields and form.fields[field].label) else field.replace('_', ' ').title()
+            error_list.append(f"{field_label}: {errs[0]}")
+
+        first_error_msg = error_list[0] if error_list else 'Please fill in all required fields accurately.'
         return JsonResponse({
             'success': False,
-            'message': 'Please fill in all required fields accurately.',
-            'errors': errors
+            'message': f"Please fix the error: {first_error_msg}",
+            'errors': field_errors,
+            'error_list': error_list
         }, status=400)
 
 
@@ -250,4 +258,9 @@ def estimate_cost_api(request):
         'estimated_weeks': f"{weeks} Weeks",
         'summary': f"Estimated for {platform.title()} build with {len(features)} key modules."
     })
+
+
+def google_site_verification(request):
+    content = "google-site-verification: googleb5b8517425e25d8e.html"
+    return HttpResponse(content, content_type='text/html')
 
